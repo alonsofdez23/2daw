@@ -1,0 +1,40 @@
+header {
+  background-color: gray;
+}
+nav {
+  background-color: silver;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-right: none;
+}
+li {
+  list-style: none;
+  float: left;
+  text-align: center;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #ccc;
+  width: 16.6667%;
+  /* fallback for non-calc() browsers */
+  width: calc(100% / 4);
+  box-sizing: border-box;
+}
+nav ul {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  width: calc(100% / 4);
+}
+section {
+  background-color: silver;
+}
+aside {
+  background-color: gray;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-right: none;
+}
+footer {
+  background-color: gray;
+}
