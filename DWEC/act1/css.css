@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor {
+  position: relative;
+}
+
+.caja1 {
+  background-color: lightblue;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.caja2 {
+  background-color: lightcoral;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.caja3 {
+  background-color: lightgreen;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.caja4 {
+  background-color: darkblue;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.caja5 {
+  background-color: blueviolet;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
