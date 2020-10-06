@@ -68,6 +68,30 @@ footer {
 #textonegrita {
 }
 
+.art {
+  width: 96%;
+  height: 20%;
+  background: #424242;
+  margin: 1em;
+  border-radius: 1em;
+}
+
+/* #art1 {
+  position: fixed;
+}
+
+#art2 {
+  position: relative;
+}
+
+#art3 {
+  position: sticky;
+}
+
+#art4 {
+  position: absolute;
+} */
+
 /*
 Especificidad --> Existe una jerearquía en la líneas que componen los elementos.
                   La propiedad que manda es la última, pero si yo le cambio una propiedad a una clase
