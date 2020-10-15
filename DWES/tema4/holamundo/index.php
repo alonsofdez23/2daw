@@ -8,7 +8,17 @@
 </head>
 
 <body>
-    <?php echo "Hola, mundo" ?>
+    <!-- <?php echo "Hola, mundo" ?><br>
+    <?= "Hola, mundo" ?><br>
+    <?= php_sapi_name() ?><br>
+    <?= phpinfo() ?> -->
+
+    <form action="saluda.php" method="get">
+        <label for="">Escribe tu nombre</label>
+        <input type="text" name="nombre" id="nom">
+        <button type="submit">Saludar</button>
+    </form>
+
 </body>
 
 </html>
