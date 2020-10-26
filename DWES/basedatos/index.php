@@ -20,9 +20,23 @@
     <?php
 
     $pdo = new PDO('pgsql:host=localhost;dbname=prueba', 'prueba', 'cachalote13');
-    $sent = $pdo->query('SELECT COUNT(*) FROM depart');
-    $count = $sent->fetchColumn();
-    $sent = $pdo->query('SELECT * FROM depart');
+
+    // Validación del $dept_no
+    if ($dept_no = '') {
+        $sent = $pdo->query('SELECT COUNT(*) FROM depart');
+        $count = $sent->fetchColumn();
+        $sent = $pdo->query('SELECT * FROM depart');
+    } else {
+        $sent = $pdo->prepare("SELECT *
+                               FROM depart
+                               WHERE dept_no = :dept_no");
+        $sent->execute([':dept_no' => $dept_no]);
+        $count = $sent->fetchColumn();
+        $sent = $pdo->prepare("SELECT *
+                               FROM depart
+                               WHERE dept_no = :$dept_no");
+        $sent->execute([':dept_no' => $dept_no]);
+    }
     ?>
     <h3>La tabla tiene <?= $count ?> filas.</h3>
     <table border="1">
@@ -37,6 +51,11 @@
                     <td><?= $fila['dept_no'] ?></td>
                     <td><?= $fila['dnombre'] ?></td>
                     <td><?= $fila['loc'] ?></td>
+                    <td>
+                        <form action="borrar.php" method="post">
+                            <input type="hidden" name="id" value="<?= $fila['id'] ?>">
+                            <button type="submit">Borrar</button>
+                        </form>
                 </tr>
             <?php endforeach ?>
         </tbody>
