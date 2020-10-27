@@ -9,6 +9,9 @@
 
 <body>
     <?php
+    require('auxiliar.php');
+    include('cookies');
+    include('banner');
     $dept_no = isset($_GET['dept_no']) ? trim($_GET['dept_no']) : null;
 
     ?>
