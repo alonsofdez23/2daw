@@ -1,0 +1,35 @@
+* {
+    background-color: #9b3b3b;
+    color: #042220;
+    font-family: "Work Sans", sans-serif;
+}
+
+body {
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+hr {
+    border: 0 none #042220;
+    border-top: 1px solid #042220;
+    height: 1px;
+    margin: 30px 0;
+    display: block;
+}
+
+#fotoPersonal {
+    width: 300px;
+    height: 300px;
+    float: right;
+    margin: 1em 1em 1em 1em;
+}
+
+#tablaIdiomas {
+    border-collapse: collapse;
+    border: #042220 1px solid;
+    box-shadow: 5px 5px 5px #042220;
+}
+
+td {
+    border: #042220 3px solid;
+}
