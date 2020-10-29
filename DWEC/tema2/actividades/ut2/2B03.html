@@ -6,6 +6,48 @@
         <title>act3</title>
     </head>
     <body>
-        <form action=""></form>
+        <script>
+            function mifuncion() {
+                var sala = document.getElementById("sala").value;
+                var asesino = document.getElementById("asesino").value;
+                console.log(sala);
+                console.log(asesino);
+                var items = {
+                    baile: "veneno",
+                    galeria: "trofeo",
+                    billar: "palo de billar",
+                    comedor: "cuchillo"
+                };
+                var disposicion = {
+                    parkes: "comedor",
+                    van: "galeria",
+                    sparr: "billar",
+                    kale: "baile"
+                }
+                console.log(disposicion);
+                if (sala == disposicion[asesino]) {
+                    document.write("<p>" + asesino + " lo hizo en el " + disposicion[asesino] + " con el " + items[sala] + "!</p>");
+                } else {
+                    document.write("<p>No has coincidido con el asesino, sigue intentando</p>");
+                }
+            }
+        </script>
+        <form action="index.html" method="get">
+            <select name="salas" id="sala">
+                <option value="" disabled selected>Seleccione una sala...</option>
+                <option value="baile">Salón de baile</option>
+                <option value="galeria">Galería</option>
+                <option value="billar">Sala de billar</option>
+                <option value="comedor">Comedor</option>
+            </select>
+            <select name="asesino" id="asesino">
+                <option value="" disabled selected>Seleccione un culpable...</option>
+                <option value="parkes">Sr. Parkes</option>
+                <option value="van">Sra. Van Cleve</option>
+                <option value="sparr">Sra. Sparr</option>
+                <option value="kale">Sr. Kalehoff</option>
+            </select>
+            <input type="submit" onclick="mifuncion()" value="¿Será el asesino?">
+        </form>
     </body>
 </html>
