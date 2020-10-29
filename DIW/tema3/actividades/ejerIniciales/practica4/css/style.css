@@ -1,0 +1,26 @@
+
+body {
+    background-image: url(../imagenes/fondo_div.png);
+    background-repeat: repeat-x;
+    background-size: cover;
+}
+
+main {
+    margin: 0 20% 0 20%;
+}
+
+
+.parrafo {
+    margin-left: 15%;
+    
+}
+
+.parrafo::first-line {
+    color: gray;
+}
+
+ul {
+    float: right;
+    margin: 1em 1em 1em 1em;
+    color: white;
+}
