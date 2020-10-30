@@ -29,6 +29,7 @@
                     document.write("<p>" + asesino + " lo hizo en el " + disposicion[asesino] + " con el " + items[sala] + "!</p>");
                 } else {
                     document.write("<p>No has coincidido con el asesino, sigue intentando</p>");
+                    setTimeout(function () { location.reload(); }, 3000);
                 }
             }
         </script>
