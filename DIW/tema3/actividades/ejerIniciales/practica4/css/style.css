@@ -1,12 +1,14 @@
-
 body {
     background-image: url(../imagenes/fondo_div.png);
     background-repeat: repeat-x;
     background-size: cover;
 }
 
-main {
-    margin: 0 20% 0 20%;
+section {
+    width: 800px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 
@@ -21,6 +23,6 @@ main {
 
 ul {
     float: right;
-    margin: 1em 1em 1em 1em;
+    margin: 3em 1em 1em 1em;
     color: white;
 }
