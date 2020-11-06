@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3A05</title>
+    </head>
+    <body>
+        <p>Muestra un menú con las distintas zonas horarias, pide al usuario que indique la zona horaria de la que desea conocer la hora y muestre la hora local del lugar seleccionado.</p>
+
+        <p>Simplificando, tendremos en cuenta las siguientes zonas horarias:</p>
+
+
+
+        <p id="parrafo"></p>
+        
+        <script>
+
+            function validarFranja() {
+                var franja = parseInt(prompt("Introduces una franja horaria (entre -12 y +12)"));
+
+                var date = new Date();
+                var hour = date.getHours();
+
+                if (franja < 13 && franja > 13) {
+                    var hora_franja = hora + franja;
+                    document.getElementById("parrafo").innerHTML =
+                    "La hora en esa franja horaria (UTC +" + franja + ") es" + hora_franja + ":" + ((date.getUTCMinutes() < 10) ? "0" + date.getUTCMinutes() : date.getUTCMinutes()) + ":" + date.getUTCSeconds()
+                } else {
+                    alert("La frnaja no es correcta, vuelve a introducirla");
+                    validarFranja()
+                }
+            }
+        </script>
+    </body>
+</html>

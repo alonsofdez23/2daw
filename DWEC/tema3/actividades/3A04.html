@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3A04</title>
+    </head>
+    <body>
+        <p>Haz que el ordenador te salude educadamente dándote los buenos días, buenas tardes o buenas noches dependiendo de la hora que sea.</p>
+
+        <p id="parrafo"></p>
+        
+        <script>
+            var date = new Date();
+            var hour = date.getHours();
+
+            if (hour >= 7 && hour < 12) {
+                document.getElementById("parrafo").innerHTML = (`Buenos días`);
+            } else if (hour >= 12 && hour < 21) {
+                document.getElementById("parrafo").innerHTML = (`Buenas tardes`);
+            } else {
+                document.getElementById("parrafo").innerHTML = (`Buenas noches`);
+            }
+        </script>
+    </body>
+</html>
