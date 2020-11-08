@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 04</title>
+    </head>
+    <body>
+        <p>
+            Realiza un script que muestre en el documento los múltiplos de 8
+            comprendidos entre dos números que se solicitarán al usuario.
+            No importa el orden en el que los inserte el usuario, siempre
+            se presentarán de menor al mayor, ambos inclusive.
+        </p>
+        <h2 id="resultado"></h2>
+        <script>
+            let x = Number(prompt('Introduce el primer número'));
+            let y = Number(prompt('Introduce el segundo número'));
+
+            if (isNaN(x) || isNaN(y)) {
+                alert('Ambos valores introducidos deben ser números');
+            } else if (x > y) {
+                mayor = x;
+                menor = y;
+            } else {
+                mayor = y;
+                menor = x;
+            }
+
+            let resultado =
+            `Los múltiplos de 8 comprendidos entre ${menor} y ${mayor}
+            son: `;
+
+            while (mayor > menor) {
+                if ((mayor % 8) == 0) {
+                    resultado += `${mayor}, `;
+                }
+                mayor--;
+            }
+            let resultadoFormat = resultado.slice(0,-2) + '.';
+            
+            document.getElementById('resultado').innerHTML = resultadoFormat;
+        </script>
+    </body>
+</html>

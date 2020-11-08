@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 01</title>
+    </head>
+    <body>
+        <p>
+            Realiza un script que le pregunte al usuario la nota obtenida en un examen, y en función
+            del resultado devuelva “Suspenso”, “Aprobado”, “Notable” o “Sobresaliente”. Realiza
+            otra versión utilizando el operador condicional ?:
+        </p>
+        <script>
+            // Pide por pantalla la nota y la almacena
+            let nota = Number(prompt("Introduce la nota del examen (0-10)"));
+
+            if (nota >= 5 && nota < 7) {
+                alert("Estás aprobado");
+            } else if (nota >= 7 && nota < 9) {
+                alert("Tienes un notable");
+            } else if (nota >= 9 && nota <= 10) {
+                alert("Tienes un sobresaliente");
+            } else {
+                alert ("Estás suspenso");
+            }
+        </script>
+    </body>
+</html>

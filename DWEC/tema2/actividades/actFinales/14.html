@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 14</title>
+    </head>
+    <body>
+        <p>
+            Realiza un script que pida la contraseña de acceso a una página web y compruebe si es la
+            misma que la almacenada en una variable. Si es correcta, le dará la bienvenida, sino se la
+            volverá a pedir.
+        </p>
+        <h2 id="resultado"></h2>
+        <script>
+            let pass = prompt('Introduzca la contraseña de acceso');
+
+            if (pass == 'donana') {
+                document.getElementById('resultado').innerHTML =
+                'Contraseña correcta. Bienvenido.';
+            } else {
+                document.getElementById('resultado').innerHTML =
+                'Contraseña errónea.';
+            }
+        </script>
+    </body>
+</html>

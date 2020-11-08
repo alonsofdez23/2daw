@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 09</title>
+    </head>
+    <body>
+        <p>Mini-diccionario de inglés</p>
+        <p>
+            Realiza un script que solicite al usuario introducir algunas de estas palabras (casa, mesa,
+            perro, gato) para luego mostrar la palabra traducida en inglés. Por ejemplo, si se ingresa
+            'casa' debemos mostrar el texto 'house' en la página. 
+        </p>
+        <h2 id="resultado"></h2>
+        <script>
+            word = prompt('Introduce alguna de estas palabras (casa, mesa, perro, gato) para traducirla').toLowerCase;
+            
+            switch (word) {
+                case casa:
+                    document.getElementById('resultado').innerHTML =
+                    `${word} se traduce como <b>house<b>`;
+                    break;
+                case mesa:
+                    document.getElementById('resultado').innerHTML =
+                    `${word} se traduce como <b>table<b>`;
+                    document.getElementById().innerHTML = 'hola';
+                    break;
+                case perro:
+                    document.getElementById('resultado').innerHTML =
+                    `${word} se traduce como <b>dog<b>`;
+                    break;
+                case gato:
+                    document.getElementById('resultado').innerHTML =
+                    `${word} se traduce como <b>cat<b>`;
+                    break;
+                default:
+                    alert('Valor incorrecto')
+                    break;
+            }
+        </script>
+    </body>
+</html>

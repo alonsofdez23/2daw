@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 12</title>
+        <script>
+            function operacion() {
+                var x = Number(prompt("Introduce una opción"));
+                var w = document.getElementById('resultado');
+                switch (x) {
+                    case 1 :
+                        w.innerHTML = input1 + input2;
+                        break;
+                    case 2 :
+                        w.innerHTML = input1 - input2;
+                        break;
+                    case 3 :
+                        w.innerHTML = input1 / input2;
+                        break;
+                    case 4 :
+                        w.innerHTML = input1 * input2;
+                        break;
+                    case 5 :
+                        w.innerHTML = input1 % input2;
+                        break;
+                    case 6 :
+                        document.body.innerHTML = "Se ha salido.";
+                        break;
+                }
+            }
+
+            function iniciar() {
+                input1 = Number(prompt("Introduce el primer valor"));
+                input2 = Number(prompt("Introduce el segundo valor"));
+
+                document.getElementById('entrada1').innerHTML = `Primer valor: ${input1}`;
+                document.getElementById('entrada2').innerHTML = `Segundo valor: ${input2}`;
+            }
+        </script>
+    </head>
+    <body onload="iniciar()">
+        <p>
+            Realiza un script que muestre por pantalla un menú <b>(utiliza console.log())</b>; 
+        </p>
+        <ul>
+            <il>"Calculadora"</il>
+            <il>Pulse 1 para sumar</il>
+            <il>Pulse 2 para restar</il>
+            <il>Pulse 3 para multiplicar</il>
+            <il>Pulse 4 para dividir</il>
+            <il>Pulse 5 para obtener el módulo</il>
+            <il>Pulse 6 para salir</il>
+        </ul>
+        <p>
+            En función de la opción seleccionada realizará la operación y si pulsa la opción 6, con el
+            botón confirm preguntar si está seguro de salir, si es que si cerrará la ventana si es que
+            no, se volverá a elegir una opción del menú.
+        </p>
+        <div id="entrada1"></div>
+        <div id="entrada2"></div>
+
+        <form action="">
+            <input type="button" value="Operacion" onclick="operacion()">
+        </form>
+
+        <div id="resultado">Pulsa para realizar una operación</div>
+    </body>
+</html>

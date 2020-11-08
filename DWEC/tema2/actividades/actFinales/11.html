@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 11</title>
+    </head>
+    <body>
+        <p>
+            Realiza un script en el que un usuario introduzca un número, y vaya sumando cada una de
+            sus cifras y devuelva el resultado.
+            Modificaciones:
+        </p>
+        <ul>
+            <il>Si el número es decimal suma solo la parte entera</il>
+            <il>Si el número es decimal suma solo la parte entera</il>
+        </ul>
+        <h2 id="resultado"></h2>
+        <script>
+            var num = prompt('Introduce un número');
+            var resultado_entero = 0;
+            var resultado_decimal = 0;
+
+            document.getElementById('resultado').innerHTML +=
+            `Número introducido: ${num}</br>`;
+
+            if ((Number(num) % 1) == 0) { //No es decimal
+                for(i = 0; i < num.length; i++) {
+                    resultado_entero += parseInt(num.charAt(i));
+                }
+            } else if (!isNaN(Number(num))) { //Es decimal
+                for(i = 0; i < num.length; i++) {
+                    if (num.charAt(i) == ".") {
+                        i++;
+                        for(i; i < num.length; i++) {
+                            resultado_decimal += Number(num.charAt(i));
+                        }
+                        break;
+                    } else {
+                        resultado_entero += parseInt(num.charAt(i));
+                    }
+                }
+                document.getElementById('resultado').innerHTML +=
+                `La suma decimal es de ${resultado_decimal}</br>`;
+            }
+            else {
+               alert('No es valido');
+            }
+
+            document.getElementById('resultado').innerHTML +=
+            `La suma entera es de ${resultado_entero}</br>`;
+        </script>
+    </body>
+</html>

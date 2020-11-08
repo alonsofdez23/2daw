@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 02</title>
+    </head>
+    <body>
+        <p>
+            El factorial de un número entero n es una operación matemática que consiste en
+            multiplicar todos los factores n x (n-1) x (n-2) x ... x 1. Crea un script que
+            calcule el factorial de un número entero.
+        </p>
+        <h2 id="resultado"></h2>
+    </body>
+    <script>
+        // Pedir el número por pantalla
+        let x = y = Number(prompt("Introduce el número:"));
+
+        // Comprobar y calcular
+        if (isNaN(x)) {
+            alert("No es un número");
+            document.getElementById('resultado').innerHTML =
+            "Has introducido un valor incorrecto";
+        } else {
+            while (x > 1) {
+                y = y * (x - 1);
+                x--;
+            }
+            document.getElementById("resultado").innerHTML =
+            `El factorial es -> ${y}`;
+        }
+    </script>
+</html>

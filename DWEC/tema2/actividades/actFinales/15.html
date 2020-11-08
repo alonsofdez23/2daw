@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 15</title>
+        <style>
+            table {
+                width: 300px;
+                text-align: center;
+                border: 3px solid #000000;
+                box-shadow: 3px 3px 3px 3px #000000
+            }
+            table tr th {
+                border: 3px solid black;
+            }
+            table tr td {
+                border-bottom: 3px solid #000000;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            Realiza un script que determine si la cadena de texto que se le pide al usuario es un
+            palíndromo, es decir, si se lee de la misma forma desde la izquierda y desde la derecha.
+            Ejemplo de palíndromo complejo: "La ruta nos aporto otro paso natural".
+        </p>
+        <table>
+            <tr>
+                <th>Normal</th>
+                <th>Invertida</th>
+            </tr>
+        <script>
+            var input = prompt('Introduzca la frase:');
+            var input_limpia = input.toLowerCase().trim().replace(/\s/g,'');
+
+            document.write('</br>La frase introducida es: ' + input + '</br></br>');
+            document.write('</br>La frase limpia es: ' + input_limpia + '</br></br>');
+
+            for (i=0, j=(input_limpia.length-1); i<input_limpia.length; i++, j--) {
+                document.write('<tr><td>' + input_limpia[i] + '</td>' + '<td>' + input_limpia[j] + '</td></tr>');
+                if (input_limpia[i] == input_limpia[j]) {
+                    continue;
+                } else {
+                    alert('No coincide');
+                    break;
+                }
+            }
+        </script>
+    </body>
+</html>

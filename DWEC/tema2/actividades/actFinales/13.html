@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 13</title>
+    </head>
+    <body>
+        <p>
+            Dado un array, con 6 elementos, dos valores booleanos, dos valores numéricos y dos
+            cadenas de caracteres. Realizar un script que devuelva la siguiente información:  
+        </p>
+        <p>Ejemplo: A partir del siguiente array que se proporciona:</p>
+        <p style="color: red;">var valores = [true, 5, false, "hola", "adios", 2];</p>
+        <ul>
+            <il>Determinar cuál de los dos elementos de texto es mayor</il>
+            <il>Determinar el resultado de dos operaciones lógicas realizadas con los elementos
+                booleanos</il>
+            <il>Determinar el resultado de dos operaciones aritméticas realizadas con los elementos
+                numéricos</il>
+        </ul>
+        <script>
+            var values = [true, 5, false, 'hola', 'adios', 2];
+            var numeros_suma = 0;
+            var numeros_multi = 1;
+            var cadena_mayor = "";
+
+            // Comprueba cada valor en el array
+            for (x in values) {
+                if ((!isNaN(values[x])) && (values[x] >= 0) && (values[x] != true) && (values[x] !=false)) {
+                    numeros_suma += values[x];
+                    numeros_multi *= values[x];
+                    document.body.innerHTML += values[x] + 'Es un numero</br>';
+                } else if ((values[x] == true) || (values[x] == false)){
+                    document.body.innerHTML += values[x] + 'Es un booleano</br>';
+                } else {
+                    document.body.innerHTML += values[x] + 'Es una cadena</br>';
+                    if (values[x] > cadena_mayor) {
+                        cadena_mayor = values[x];
+                    }
+                }
+            }
+
+            alert(`Suma: ${numeros_suma} y multiplicación: ${numeros_multi}`);
+            alert(`La cadena más larga es ${cadena_mayor}`);
+        </script>
+    </body>
+</html>

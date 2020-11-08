@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 05</title>
+    </head>
+    <body>
+        <p>
+            Solicita un número y muestra al usuario su tabla de multiplicar.
+        </p>
+        <h2 id="tabla"></h2>
+        <h3 id="resultado"></h3>
+        <script>
+            let num = Number(prompt('Introduce un número'));
+
+            document.getElementById('tabla').innerHTML = `Tabla de multiplicar del ${num}`;
+
+            for (i = 0; i < 11; i++) {
+                resultado += `${num} x ${i} = ${num * i}<br>`;
+            }
+
+            document.getElementById('resultado').innerHTML = resultado;
+        </script>
+    </body>
+</html>

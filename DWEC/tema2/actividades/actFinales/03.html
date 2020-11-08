@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 03</title>
+    </head>
+    <body>
+        <p>
+            Realiza un script que pida al usuario un número, e indique si es par o impar.
+        </p>
+        <h2 id="resultado"></h2>
+        <script>
+            let num = Number(prompt('Introduce un número'));
+
+            if (isNaN(num)) {
+                alert('Debes introducir un número');
+            } else if (num % 2 != 0) {
+                document.getElementById('resultado').innerHTML =
+                `El número ${num} es impar`;
+            } else {
+                document.getElementById('resultado').innerHTML =
+                `El número ${num} es par`;
+            }
+        </script>
+    </body>
+</html>

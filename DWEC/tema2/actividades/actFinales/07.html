@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 07</title>
+    </head>
+    <body>
+        <p>
+            Realiza un script que muestre mediante mensajes los dígitos que componen un número.
+            Éste tiene que ser menor de 1000.
+        </p>
+        <h2 id="resultado"></h2>
+        <script>
+            let num = prompt('Introduce un número menor a 1000');
+            let tmp = 1000;
+
+            if ((Number(num) < 1000) && (!isNaN(Number(num)))) {
+                for (x in num) {
+                    alert(num[x]);
+                }
+            } else {
+                document.getElementById('resultado').innerHTML = 'No es valido';
+            }
+        </script>
+    </body>
+</html>
