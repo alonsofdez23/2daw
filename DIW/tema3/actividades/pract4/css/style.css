@@ -1,16 +1,38 @@
+@import url(reset.css);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-image: url(../imagenes/fondo_div.png);
-    background-repeat: repeat-x;
-    background-size: cover;
+    background-image: url(../imagenes/fondo.png), url(../imagenes/fondo_div.png);
+    background-size: auto, cover;
 }
 
 section {
+    background-image: url(../imagenes/fondo.jpg);
+    background-size: 800px 135px;
+    background-repeat: no-repeat;
+    border: white solid 4px;
     width: 800px;
     position: relative;
     left: 50%;
     transform: translate(-50%);
 }
 
+h1 > strong {
+    font-size: 10em;
+    color: white;
+}
+
+h1 > span {
+    font-size: 2em;
+    color: red;
+    font-weight: 900;
+    position: relative;
+    right: 1em;
+}
 
 .parrafo {
     margin-left: 15%;
