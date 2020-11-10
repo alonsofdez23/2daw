@@ -1,49 +1,64 @@
 @import url(reset.css);
 
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
 body {
 	font-size: 62.5%;
 }
+
 #contenido {
-	margin-left: 15px;
-	margin-top: 15px;
-	border: 1px dashed #999;
-	border-right: none;
-	border-bottom: none;
+	margin: 15px 15px 15px 15px;
+	border: 2px dashed brown;
+}
+
+#contenido > p:nth-child(2) {
+	color: brown;
+	font-weight: bold;
+}
+
+#galeria {
+	text-align: center;
+}
+
+.figura {
+	display: inline-block;
 }
 
 #galeria .figura p {
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 1.1em;
-	text-align: center;
 	line-height: normal;
+	position: relative;
+	bottom: 40px;
+	text-align: center;
 }
-
 
 h1 {
-	font: normal 2.4em Verdana, Arial, Helvetica, sans-serif;
+	font: normal 2.4em 'Roboto', Arial, Helvetica, sans-serif;
 	margin: 0;
-	border-bottom: 1px dashed #999;
+	border-bottom: 2px dashed brown;
 	padding: 5px 0 5px 8px;
-	color: #14556b;
+	color: brown;
 }
 p {
-	font: 1.1em Georgia, "Times New Roman", Times, serif;
+	font: 1.1em 'Roboto', "Times New Roman", Times, serif;
 	margin: 10px 8px;
 }
 
 .foto {
 	float: left;
 	width:210px;
-	height:180px;
+	height:160px;
 	margin: 10px;
-	padding:5px;
-	background-color:burlywood;
-	border-right: #a5a7aa solid 2px;
-	border-bottom: #a5a7aa solid 2px;
+	padding:7px;
+	background-color: brown;
+	box-shadow: 5px 5px 5px;
 	text-align:center;
+	border-radius: 10px;
 }
 
-.figura p {
-	display: flex;
-	float: left;
+img {
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px;
 }
