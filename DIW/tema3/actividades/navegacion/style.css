@@ -15,6 +15,44 @@ q:before, q:after { content:''; }
 
 
 body {
-	font: 62.5% Verdana, Arial, Helvetica, sans-serif;
+	font: 90% Verdana, Arial, Helvetica, sans-serif;
 	padding: 20px;
+}
+
+ul {
+	width: 250px;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+ul>li {
+	border: 1px dashed grey;
+	list-style: none;
+	height: 24px;
+	text-transform: uppercase;
+	padding-top: 8px;
+	padding-left: 30px;
+}
+
+li>img {
+	width: 30px;
+}
+
+.arrow {
+	background: url(./images/fondolink.png) no-repeat left top;
+	background-color: #e7e7e7;
+}
+
+.arrow:hover {
+	background: url(./images/fondolink.png) no-repeat left;
+	background-color: #07f5f7;
+	font-weight: bold;
+}
+
+#select {
+	background: url(./images/fondolink.png) no-repeat right bottom;
+	font-weight: bold;
 }
