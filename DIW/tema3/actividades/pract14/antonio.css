@@ -1,0 +1,45 @@
+#barralateral{
+    float:left;
+    width: 15%;
+    margin-top:13px;
+}
+
+#principal{
+    margin-left:17%;
+    margin-right:17%;
+}
+
+#secundario{
+    float:right;
+    width:15%;
+    margin-top: 13px;
+    background-color: #294e56;
+}
+
+#secundario *{
+    color:#fff;
+}
+
+#secundario h3{
+    font-size: 1.5em;
+    background-color: #73afb7;
+    padding: 3px 5px 3px 10px;
+}
+
+#secundario h4{
+    font-size: 1.2em;
+    margin: 10px 10px 5px 10px;
+}
+
+#secundario p{
+    font-size: 1.2em;
+    margin: 3px 10px 10px 10px;
+    line-height: 110%;;
+}
+
+body{
+    background-image: url(images/bg/bg_column.gif);
+    background-size: 15%;
+    background-repeat: repeat-y;
+    background-position: right top;
+}

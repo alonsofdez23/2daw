@@ -1,0 +1,12 @@
+<ul id="noticias">
+    <li><a href="#"><span class="titulo">Capricornio: Es tu mes</span>Esto es un texto de ejemplo.</a></li>
+    <li><a href="#"><span class="titulo">Tu opinión </span>Esto es un texto de ejemplo.</a></li>
+    <li><a href="#"><span class="titulo">El mensaje de este mes </span>Esto es un texto de ejemplo.</a></li>
+    <li><a href="#"><span class="titulo">¿Triste o contento? </span>Esto es un texto de ejemplo.</a></li>
+    <li><a href="#"><span class="titulo">Características </span>Esto es un texto de ejemplo.</a></li>
+    <li><a href="#"><span class="titulo">Principal</span>Esto es un texto de ejemplo.</a></li>
+    <li><a href="#"><span class="titulo">Noticias</span>Esto es un texto de ejemplo.</a></li>
+    <li><a href="#"><span class="titulo">Incidentes </span>Esto es un texto de ejemplo.</a></li>
+    <li><a href="#"><span class="titulo">Casos célebres </span>Esto es un texto de ejemplo.</a></li>
+    <li><a href="#"><span class="titulo">Nuevas tecnologías</span>Esto es un texto de ejemplo.</a></li>
+</ul>
