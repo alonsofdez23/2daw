@@ -1,0 +1,53 @@
+header {
+    padding-top: 20px;
+}
+#logo {
+    float: left;
+    width: 350px;
+    height: 164px;
+}
+#cabecera {
+    height: 200px;
+    margin-left: 350px;
+    margin-bottom: 20px;
+}
+#cabecera h1 {
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    height: 140px;
+    text-align: center;
+    font-size: 5em;
+    margin-bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 0;
+}
+#menucabecera {
+    text-align: center;
+    list-style: none;
+    height: 20px;
+    border-top: 1px dashed gray;
+    border-bottom: 1px dashed gray;
+    padding: 10px 10px 10px 10px;
+}
+#menucabecera li {
+    display: inline;
+    margin: 20px 20px 20px 20px;
+}
+main {
+    display: inline-block;
+    margin-top: 2%;
+}
+#principal {
+    float: left;
+    width: 60%;
+    margin-left: 20%;
+}
+#noticias {
+    float: left;
+    width: 20%;
+    margin-left: -80%;
+}
+#nav {
+    float: right;
+    width: 20%;
+}
