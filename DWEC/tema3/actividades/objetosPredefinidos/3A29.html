@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3A29</title>
+    </head>
+    <body>
+        <p>Realiza un script que reciba una cadena y elimine las etiquetas &lt;script&gt; en el caso de que las incluya. Mostrar la cadena por consola.</p>
+        <script>
+            var texto = prompt("Introduce tu texto:");
+            var arrayTexto = texto.split(" ");
+            var long = prompt("Introduce tu longitud:");
+            var patron = "^[a-z]{" + long + "}$"
+            var comprobar = new RegExp(patron, "gi");
+
+            for (var x in arrayTexto) {
+                var palabra = arrayTexto[x];
+                if (comprobar.test(palabra)) {
+                    document.write("<p>La palabra " + palabra + " sigue el patron correcto " + patron + "</p>");
+                }
+            }
+        </script>
+    </body>
+</html>

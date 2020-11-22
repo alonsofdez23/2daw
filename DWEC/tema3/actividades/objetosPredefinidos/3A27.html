@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3A28</title>
+    </head>
+    <body>
+        <p>Modificar los ejercicios 24,25 y 26 para que el patrón buscado lo pueda decidir el usuario en tiempo de ejecución</p>
+        <script>
+            // Input from User 
+            const regex = prompt("Introduce tu patron:");
+
+            // Conversion from string to RegExp 
+            const comprobar = new RegExp(regex, "gi");
+
+            var frase = prompt("Introduce tu frase:");
+            var arrayFrase = frase.split(" ");
+            var cont = 0;
+            for (var x in arrayFrase) {
+                var palabra = arrayFrase[x];
+                if (comprobar.test(palabra)) {
+                    cont += 1;
+                }
+            }
+            document.write("<p>El número de palabras que contienen 'te' son: " + cont + "</p>");
+        </script>
+    </body>
+</html>

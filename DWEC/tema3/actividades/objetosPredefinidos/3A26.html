@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3A26</title>
+    </head>
+    <body>
+        <p>Mostrar el número de palabras contienen 'te' dentro de una cadena.</p>
+        <script>
+            var comprobar = /^\w*te\w*$/gi;
+            var frase = prompt("Introduce una frase:");
+            var arrayFrase = frase.split(" ");
+            var cont = 0;
+            for (var x in arrayFrase) {
+                var palabra = arrayFrase[x];
+                if (comprobar.test(palabra)) {
+                    cont += 1;
+                }
+            }
+            document.write("<p>El número de palabras que contienen 'te' son: " + cont + "</p>");
+        </script>
+    </body>
+</html>
