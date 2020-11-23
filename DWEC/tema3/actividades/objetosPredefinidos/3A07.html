@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3A07</title>
+    </head>
+    <body>
+        <h3>Genera 10 números aleatorios comprendidos entre 0 y 20, todos enteros.</h3>
+
+        <input type="button" value="Generar" onclick="generarRandom()">
+
+        <script>
+            // Retorna un entero aleatorio entre min (incluido) y max (excluido)
+            function getRandomInt(min, max) {
+                return Math.floor(Math.random() * (max - min)) + min;
+            }
+
+            // Genera 10 números enteros aleatorios
+            function generarRandom() {
+                for (i = 1; i <= 10; i++) {
+                    let string =+ getRandomInt(0, 21) + ", ";
+                    return string.slice(-2);
+                }
+            }
+
+            document.write(generarRandom());
+        </script>
+    </body>
+</html>
