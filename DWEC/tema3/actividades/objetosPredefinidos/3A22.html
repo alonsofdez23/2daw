@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3A22</title>
+    </head>
+    <body>
+        <p>Buscar la primera palabra de cada frase</p>
+        <script>
+            var patt = /^\w*\s/mi;
+
+            while (true) {
+                var frase = prompt("Introduce una frase");
+            
+                document.write("<p>La primera palabra de la frase es: " + patt.exec(frase) + "</p>");
+                break;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3A05</title>
+    </head>
+    <body>
+        <h3>Muestra un menú con las distintas zonas horarias, pide al usuario que indique la zona horaria de la que desea conocer la hora y muestre la hora local del lugar seleccionado.</h3>
+
+        <p>Simplificando, tendremos en cuenta las siguientes zonas horarias:</p>
+
+        <ul>
+            <li>UTC -12 : Línea internacional de fecha del oeste</li>
+            <li>UTC -11 : Isla Midway, Samoa</li>
+            <li>UTC -10 : Hawai</li>
+            <li>UTC -9 : Alaska</li>
+            <li>UTC -8 : Hora del pacífico (USA y Canadá)</li>
+            <li>UTC -7 : Hora de las montañas rocosas (USA y Canadá)</li>
+            <li>UTC -6 : América central</li>
+            <li>UTC -5 : Hora central (USA y Canadá)</li>
+            <li>UTC -4 : Hora del Atlántico (Canadá)</li>
+            <li>UTC -3 : Buenos Aires, Asunción, Brasilia, Montevideo</li>
+            <li>UTC -2 : Atlántico central</li>
+            <li>UTC -1 : Azores</li>
+            <li>UTC 0 : Hora del meridiano de Greenwich, Londres, Dublín</li>
+            <li>UTC +1 : París, Madrid, Barcelona, Roma</li>
+            <li>UTC +2 : El Cairo</li>
+            <li>UTC +3 : Nairobi</li>
+            <li>UTC +4 : Bakú</li>
+            <li>UTC +5 : Ekaterimburgo</li>
+            <li>UTC +6 : Astana</li>
+            <li>UTC +7 : Bangkok</li>
+            <li>UTC +8 : Ulán Bator</li>
+            <li>UTC +9 : Tokio</li>
+            <li>UTC +10 : Sidney</li>
+            <li>UTC +11 : Islas Salomón</li>
+            <li>UTC +12 : Wellington</li>
+        </ul>
+        
+        <form action="" method="GET">
+            <label for="utc">Seleccione una zona horaria</label>
+            <select name="utc" id="utc">
+                <option value="0">UTC -12 : Línea internacional de fecha del oeste</option>
+                <option value="1">UTC -11 : Isla Midway, Samoa</option>
+                <option value="2">UTC -10 : Hawai</option>
+                <option value="3">UTC -9 : Alaska</option>
+                <option value="4">UTC -8 : Hora del pacífico (USA y Canadá)</option>
+                <option value="5">UTC -7 : Hora de las montañas rocosas (USA y Canadá)</option>
+                <option value="6">UTC -6 : América central</option>
+                <option value="7">UTC -5 : Hora central (USA y Canadá)</option>
+                <option value="8">UTC -4 : Hora del Atlántico (Canadá)</option>
+                <option value="9">UTC -3 : Buenos Aires, Asunción, Brasilia, Montevideo</option>
+                <option value="10">UTC -2 : Atlántico central</option>
+                <option value="11">UTC -1 : Azores</option>
+                <option value="12">UTC 0 : Hora del meridiano de Greenwich, Londres, Dublín</option>
+                <option value="13">UTC +1 : París, Madrid, Barcelona, Roma</option>
+                <option value="14">UTC +2 : El Cairo</option>
+                <option value="15">UTC +3 : Nairobi</option>
+                <option value="16">UTC +4 : Bakú</option>
+                <option value="17">UTC +5 : Ekaterimburgo</option>
+                <option value="18">UTC +6 : Astana</option>
+                <option value="19">UTC +7 : Bangkok</option>
+                <option value="20">UTC +8 : Ulán Bator</option>
+                <option value="21">UTC +9 : Tokio</option>
+                <option value="22">UTC +10 : Sidney</option>
+                <option value="23">UTC +11 : Islas Salomón</option>
+                <option value="24">UTC +12 : Wellington</option>
+            </select>
+            <input type="button" onclick="utcc();" value="Aceptar"></input>
+        </form>
+
+        <script>
+            function utcc() {
+                var indice = document.getElementById("utc").value;
+                var utc = "UTC " + (indice - 12).toLocaleString();
+
+                var ahora = new Date();
+                var zonas = [];
+
+                for (let i = (-12), j = 0; i <= 12; i++, j++) {
+                    zonas[j] = i;
+                }
+
+                document.write("<h3>Hora actual: " + ahora.getUTCHours() + ":" + ahora.getUTCMinutes() + "</h3>");
+                document.write("<h3>Zona Horaria: " + zonas[indice] + "</h3>");
+            }
+        </script>
+
+    </body>
+</html>

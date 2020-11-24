@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3A25</title>
+    </head>
+    <body>
+        <p>Buscar las palabras que comiencen por 'lo' dentro de una cadena.</p>
+        <script>
+            var comprobar = /^\w*s$/gi;
+            var frase = prompt("Introduce tu frase:");
+            var arrayFrase = frase.split(" ");
+            console.log(arrayFrase);
+            for (var x in arrayFrase) {
+                var palabra = arrayFrase[x];
+                if (comprobar.test(palabra)) {
+                    document.write("<p>La palabra " + palabra + " termina por 's'</p>");
+                }
+            }
+        </script>
+    </body>
+</html>

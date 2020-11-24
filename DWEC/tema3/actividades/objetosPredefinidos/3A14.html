@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3A14</title>
+    </head>
+    <body>
+        <h3>
+            Realiza un script que pida al usuario una frase. De ella se extraerá la parte comprendida
+            entre unas marcas de inicio y fin (distintas) que serán indicadas por el usuario.
+        </h3>
+            <p>
+                <b>Modificación 1</b> : Realizar ahora utilizando la misma marca de inicio y fin.
+            </p>
+            <p>
+                <b>Modificación 2</b>: Probar ahora el script con la etiqueta de inicio /* y la de fin */. ¿Es correcto?
+                Modifícalo para que funcione con etiquetas de más de un carácter.
+            </p>
+        <hr>
+
+        <script>
+            var frase = prompt("Introduce una frase que contenga los caracteres < y > para delimitar");
+            var indice1 = frase.indexOf("<", 0);
+            var indice2 = frase.indexOf(">", 0);
+            var res = frase.substring(indice1 + 1, indice2);
+            document.write(`<p>La frase resultante es: ${res}</p>`);
+
+            var frase1 = prompt("Introduce una frase que contenga el caracter < para delimitar");
+            var ind1 = frase1.indexOf("<", 0);
+            var ind2 = frase1.lastIndexOf("<");
+            var res1 = frase1.substring(ind1 + 1, ind2);
+            document.write("<h3>MODIFICACIÓN 1</h3>");
+            document.write(`<p>La frase resultante es: ${res1}</p>`);
+
+            var frase2 = prompt("Introduce una frase que contenga el caracter /* y */ para delimitar");
+            var ind11 = frase2.indexOf("/*", 0);
+            var ind22 = frase2.indexOf("*/", 0);
+            var res2 = frase2.substring(ind11 + 2, ind22);
+            document.write("<h3>MODIFICACIÓN 2</h3>");
+            document.write(`<p>La frase resultante es: ${res2}</p>`);
+        </script>
+    </body>
+</html>

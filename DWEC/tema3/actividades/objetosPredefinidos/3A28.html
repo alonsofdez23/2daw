@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3A28</title>
+    </head>
+    <body>
+        <p>Modificar los ejercicios 24,25 y 26 para que el patrón buscado lo pueda decidir el usuario en tiempo de ejecución</p>
+        <script>
+            var texto = prompt("Introduce tu texto:");
+            var arrayTexto = texto.split(" ");
+            var long = prompt("Introduce tu longitud:");
+            var patron = "^[a-z]{" + long + "}$"
+            var comprobar = new RegExp(patron, "gi");
+
+            for (var x in arrayTexto) {
+                var palabra = arrayTexto[x];
+                if (comprobar.test(palabra)) {
+                    document.write("<p>La palabra " + palabra + " sigue el patron correcto " + patron + "</p>");
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3A12</title>
+    </head>
+    <body>
+        <h3>
+            Solicitar una frase desde teclado, almacenar cada palabra en un array y mostrar los
+            siguientes datos:
+        </h3>
+        <ul style="font-weight: bold;"">
+            <li>La primera palabra de la frase.</li>
+            <li>La última palabra de la frase.</li>
+            <li>El número de palabras de la frase.</li>
+        </ul>
+        <hr>
+
+        <script>
+            var frase = prompt("Introduce tu frase:");
+            var arrayCadena = frase.split(" ");
+
+            document.write(`<h3>Tu frase es: ${frase}</h3>`);
+            document.write(`<h3>La primera palabra de la frase es: ${arrayCadena[0]}"</h3>`);
+            document.write(`<h3>La ultima palabra de la frase es: ${arrayCadena[arrayCadena.length - 1]}</h3>`);
+            document.write(`<h3>La frase tiene ${arrayCadena.length} palabras</h3>`);
+        </script>
+    </body>
+</html>

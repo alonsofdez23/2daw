@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confecciona una expresión regular</title>
+</head>
+
+<body>
+    <h1>21. Confecciona una expresión regular que valide el ingreso del nombre de un día de la semana
+        y un número de 1 o 2 dígitos</h1>
+
+    <script>
+        var comprobar = /[lunes|martes|miercoles|jueves|viernes|sabado|domingo]\s\d{1,2}$/gi;
+        var sw = true;
+
+        while (sw) {
+            var dia = prompt(
+                'Introduce un dia y su numero no mayor de 2 digitos (separando el dia y el numero por un espacio en blanco)'
+            );
+            if (comprobar.test(dia)) {
+                document.write("<p>El dia/numero introducido es corecto: " + dia + "</p>");
+                sw = false;
+            } else {
+                alert('No coincide el formato de dia/numero')
+            }
+        }
+    </script>
+</body>
+
+</html>
