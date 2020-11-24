@@ -6,12 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <p>1. Calcula el tiempo restante en milisegundos entre la fecha actual y la fecha de fin de año.</p>
+    <h3>1. Calcula el tiempo restante en milisegundos entre la fecha actual y la fecha de fin de año.</h3>
+
+    <hr>
+
     <script>
         var hoy = new Date();
-        var fin = Date(2020, 11, 31);
-        var diasms = fin - hoy;
-        var dias = (((diasms / 1000) / 60) / 60);
+        var fin = new Date(2020, 12, 31, 23, 59, 59, 0);
+        var res = fin.getTime() - hoy.getTime();
+
+        document.write(`<h3>Quedan ${res} milisegundos para fin de año</h3>`);
     </script>
 </body>
 </html>

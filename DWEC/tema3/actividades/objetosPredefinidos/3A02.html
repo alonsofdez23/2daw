@@ -6,9 +6,11 @@
         <title>3A02</title>
     </head>
     <body>
-        <p>Calula tu edad sin utilzar ningún método, trabajando con milisegundos.</p>
+        <h3>
+            Calula tu edad sin utilzar ningún método, trabajando con milisegundos.
+        </h3>
 
-        <p id="parrafo"></p>
+        <hr>
         
         <script>
             var hoy = new Date();
@@ -17,8 +19,7 @@
             var years = ((((ms / 1000) / 60) / 60) / 24) / 365.25;
             years = Math.floor(years);
 
-            document.getElementById("parrafo").innerHTML =
-            (`Tienes ${years} años (${ms.toLocaleString()} ms)`)
+            document.write(`Tienes ${years} años (${ms.toLocaleString()} ms)`);
         </script>
     </body>
 </html>

@@ -6,12 +6,21 @@
         <title>3A03</title>
     </head>
     <body>
-        <p>Muestra los meses, días y años que tienes, haciendo uso de los métodos vistos en clase.</p>
+        <h3>Muestra los meses, días y años que tienes, haciendo uso de los métodos vistos en clase.</h3>
 
-        <p id="parrafo"></p>
+        <hr>
         
         <script>
-                        
-        </script>
+            var hoy = new Date();
+            var fecha = new Date(1990, 3, 6, 0, 0, 0, 0);
+            var diferencia = hoy - fecha;
+            var anos = Math.floor((((diferencia / 1000) / 3600) / 24) / 365.25);            
+            var meses = Math.floor((((diferencia / 1000) / 3600) / 24) / 30);
+            var dias = Math.floor(((diferencia / 1000) / 3600) / 24);
+
+            document.write(`<p>Tienes ${dias} días</p>`)
+            document.write(`<p>Tienes ${meses} meses</p>`)
+            document.write(`<p>Tienes ${anos} años</p>`)
+            </script>
     </body>
 </html>
