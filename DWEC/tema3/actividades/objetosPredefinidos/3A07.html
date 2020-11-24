@@ -19,12 +19,9 @@
             // Genera 10 números enteros aleatorios
             function generarRandom() {
                 for (i = 1; i <= 10; i++) {
-                    let string =+ getRandomInt(0, 21) + ", ";
-                    return string.slice(-2);
+                    document.write(getRandomInt(0, 21) + ", ");
                 }
             }
-
-            document.write(generarRandom());
         </script>
     </body>
 </html>

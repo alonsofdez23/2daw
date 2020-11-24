@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3A15</title>
+    </head>
+    <body>
+        <h3>
+            Pide al usuario que introduzca una cadena y determinar si esa cadena está formada sólo por
+            letras mayúsculas, sólo por minúsculas o por una mezcla de ambas.
+        </h3>
+        <hr>
+
+        <script>
+            var frase = prompt("Introduce una palabra o frase");
+            var diccm = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " "];
+            var diccM = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " "];
+            var res = true;
+            var i = 0;
+            var j = 0;
+            
+            function letras(frase) {
+                while (res && i < frase.length) {
+                    res = diccm.includes(frase.charAt(i));
+                    console.log(res);
+                    i++;
+                }
+                if (res) {
+                    return document.write("<p>La palabra o frase está formada solo por minúsculas</p>");
+                } else {
+                    res = true;
+                    while (res && j < frase.length) {
+                        res = diccM.includes(frase.charAt(j));
+                        console.log(res);
+                        j++;
+                    }
+                    if (res) {
+                        return document.write("<p>La palabra o frase está formada solo por mayúsculas</p>");
+                    } else {
+                        return document.write("<p>La palabra o frase está formada por minúsculas y mayúsculas</p>")
+                    }
+                }
+                
+            }
+
+            letras(frase);
+        </script>
+    </body>
+</html>

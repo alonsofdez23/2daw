@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3A10</title>
+    </head>
+    <body>
+        <h3>Haz calculadora científica.</h3>
+        <div class="resultado">
+            <ul>
+                <li>1 para sumar</li>
+                <li>2 para restar</li>
+                <li>3 para multiplicar</li>
+                <li>4 para dividir</li>
+                <li>5 para obtener el módulo</li>
+                <li>6 para salir</li>
+            </ul>
+        </div>
+    
+        <div id="entrada1" style="font-size:1.3em"></div>
+        <div id="entrada2" style="font-size:1.3em"></div>
+
+        <script>
+            function operacion() {
+                var x = Number(prompt("Introduce una opción"));
+                var w = document.getElementById('resultado');
+                switch (x) {
+                    case 1:
+                        w.innerHTML = input1 + input2;
+                        break;
+                    case 2:
+                        w.innerHTML = input1 - input2;
+                        break;
+                    case 3:
+                        w.innerHTML = input1 / input2;
+                        break;
+                    case 4:
+                        w.innerHTML = input1 * input2;
+                        break;
+                    case 5:
+                        w.innerHTML = input1 % input2;
+                        break;
+                    case 6:
+                        document.body.innerHTML = "Ha salido";
+                        break;
+                }
+            }
+
+            function iniciar() {
+                input1 = Number(prompt("Introduce un valor"));
+                input2 = Number(prompt("Introduce el segundo valor"));
+
+                document.getElementById('entrada1').innerHTML = "El valor uno es: " + input1;
+                document.getElementById('entrada2').innerHTML = "El valor dos es: " + input2;
+            }
+
+            iniciar();
+        </script>
+
+        <form style="margin: auto;text-align: center">
+            <input type="button" value="Operacion" onclick="operacion();" />
+        </form>
+        <div id="resultado" style="font-size:1.3em;margin:auto;text-align:center;">
+            Pulsa para realizar una operación
+        </div>
+    </body>
+</html>

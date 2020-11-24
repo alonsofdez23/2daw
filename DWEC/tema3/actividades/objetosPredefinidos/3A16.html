@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3A16</title>
+    </head>
+    <body>
+        <h3>
+            Realiza un script que solicite una frase al usuario. Deberá indicar si aparece en ella o no la
+            palabra indicada por el usuario. En caso de que la encuentre indicar a partir de qué posición
+            se puede encontrar la primera coincidencia. Indicar por cuantos caracteres está formada la
+            palabra buscada y por último sustituirla 'dwecl'. 
+        </h3>
+        <hr>
+
+        <script>
+            var frase = prompt("Introduce una frase");
+            var palabra = prompt("Introduce la palabra a buscar");
+
+            var indiceEncontrado = frase.indexOf(palabra, 0);
+            if (indiceEncontrado < 0) {
+                document.write(`<p>La palabra '${palabra}' se encuentra en el índice ${indiceEncontrado}</p>`);
+                document.write(`<p>La palabra '${palabra}' tiene ${palabra.length} caracteres</p>`);
+                var fraseN = frase.replace(palabra, "dwecl");
+                document.write(`<p>La frase se ha modificado a: ${fraseN}</p>`);
+            } else {
+                document.write(`<p>La palabra '${palabra}' no se encuentra en la frase ${frase}</p>`);
+            }
+        </script>
+    </body>
+</html>
