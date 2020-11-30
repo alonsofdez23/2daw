@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Operaciones con ventanas Flotantes</title>
+        <script>
+            var ventana;
+
+            function abrirVentana() {
+                ventana = open("02.html", "GOOGLE", "width=250px, height=300px");
+            }
+
+            function abrirVentanaYdetener() {
+                ventana = open("02.html", "GOOGLE", "width=250px, height=300px");
+                ventana.stop();
+            }
+
+            function cerrarVentana() {
+                ventana.close();
+            }
+
+            function darfoco() {
+                ventana.focus();
+            }
+
+            function quitarfoco() {
+                ventana.blur();
+            }
+
+            function scrollAbsoluto() {
+                window.scrollTo(0, 1000);
+            }
+
+            function scrollRelativo() {
+                window.scrollBy(0, 10);
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1 id="titulo1">Operaciones con ventanas Flotantes</h1>
+        <div>
+            Crea una página web que realice las siguientes funciones:
+            <br>
+            Imprimir, Abrir ventana (figura2), Abrir ventana y detenerla, Cerrar ventana nueva, Dar foco
+            ventana nueva, Quitar foco ventana nueva, Scroll absoluto (0, 1000) y Scroll relativo (0, 10).
+        </div>
+
+        <br> <br>
+
+        <div>
+            <form>
+                <input type="button" value="Imprimir" onclick="print();" />
+                <input type="button" value="Abrir Ventana" onclick="abrirVentana();" />
+                <input type="button" value="Abrir Ventana y detenerla" onclick="abrirVentanaYdetener();" />
+                <input type="button" value="Cerrar ventana nueva" onclick="cerrarVentana();" />
+                <input type="button" value="Dar foco a una ventana nueva" onclick="darfoco();" />
+                <input type="button" value="Quitar foco ventana nueva" onclick="quitarfoco();" />
+                <input type="button" value="Scroll absoluto" onclick="scrollAbsoluto();" />
+                <input type="button" value="Scroll relativo" onclick="scrollRelativo();" />
+            </form>
+        </div>
+
+        <div id="resultado">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga commodi reiciendis maiores tenetur repudiandae
+            quisquam cupiditate! Vel rerum, doloremque, in saepe porro dolor mollitia, asperiores aliquid velit illum
+            accusamus nam?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At suscipit in minus eum beatae iste impedit quia,
+            obcaecati eius porro aliquid, sapiente modi ad, rem adipisci excepturi tenetur laborum iure.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati laborum ad ullam iste perspiciatis eum et est
+            adipisci asperiores, repellendus a. Pariatur fuga nulla cupiditate ducimus nam. Ipsum, aliquid officia?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, obcaecati ducimus, distinctio alias sit
+            deleniti exercitationem error, sequi iste blanditiis perspiciatis quasi impedit esse placeat libero? Officia
+            velit laudantium natus?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A magnam tempora voluptatum iusto, voluptate similique
+            tempore laudantium eius, aperiam rerum ad veritatis fugit dolor optio, accusamus enim vero velit sit!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit maxime temporibus quasi quod nam, recusandae
+            aspernatur? Molestiae asperiores rem saepe dignissimos vero, ut fugiat officiis maxime repellendus velit minus
+            quod!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla iure unde impedit, itaque voluptas quis aliquam
+            commodi molestias a consequatur voluptatum quaerat necessitatibus nemo, et libero voluptatem culpa officiis ab!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga commodi reiciendis maiores tenetur repudiandae
+            quisquam cupiditate! Vel rerum, doloremque, in saepe porro dolor mollitia, asperiores aliquid velit illum
+            accusamus nam?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At suscipit in minus eum beatae iste impedit quia,
+            obcaecati eius porro aliquid, sapiente modi ad, rem adipisci excepturi tenetur laborum iure.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati laborum ad ullam iste perspiciatis eum et est
+            adipisci asperiores, repellendus a. Pariatur fuga nulla cupiditate ducimus nam. Ipsum, aliquid officia?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, obcaecati ducimus, distinctio alias sit
+            deleniti exercitationem error, sequi iste blanditiis perspiciatis quasi impedit esse placeat libero? Officia
+            velit laudantium natus?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A magnam tempora voluptatum iusto, voluptate similique
+            tempore laudantium eius, aperiam rerum ad veritatis fugit dolor optio, accusamus enim vero velit sit!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit maxime temporibus quasi quod nam, recusandae
+            aspernatur? Molestiae asperiores rem saepe dignissimos vero, ut fugiat officiis maxime repellendus velit minus
+            quod!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla iure unde impedit, itaque voluptas quis aliquam
+            commodi molestias a consequatur voluptatum quaerat necessitatibus nemo, et libero voluptatem culpa officiis ab!
+            <br><br><br><br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga commodi reiciendis maiores tenetur repudiandae
+            quisquam cupiditate! Vel rerum, doloremque, in saepe porro dolor mollitia, asperiores aliquid velit illum
+            accusamus nam?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At suscipit in minus eum beatae iste impedit quia,
+            obcaecati eius porro aliquid, sapiente modi ad, rem adipisci excepturi tenetur laborum iure.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati laborum ad ullam iste perspiciatis eum et est
+            adipisci asperiores, repellendus a. Pariatur fuga nulla cupiditate ducimus nam. Ipsum, aliquid officia?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, obcaecati ducimus, distinctio alias sit
+            deleniti exercitationem error, sequi iste blanditiis perspiciatis quasi impedit esse placeat libero? Officia
+            velit laudantium natus?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A magnam tempora voluptatum iusto, voluptate similique
+            tempore laudantium eius, aperiam rerum ad veritatis fugit dolor optio, accusamus enim vero velit sit!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit maxime temporibus quasi quod nam, recusandae
+            aspernatur? Molestiae asperiores rem saepe dignissimos vero, ut fugiat officiis maxime repellendus velit minus
+            quod!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla iure unde impedit, itaque voluptas quis aliquam
+            commodi molestias a consequatur voluptatum quaerat necessitatibus nemo, et libero voluptatem culpa officiis ab!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga commodi reiciendis maiores tenetur repudiandae
+            quisquam cupiditate! Vel rerum, doloremque, in saepe porro dolor mollitia, asperiores aliquid velit illum
+            accusamus nam?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At suscipit in minus eum beatae iste impedit quia,
+            obcaecati eius porro aliquid, sapiente modi ad, rem adipisci excepturi tenetur laborum iure.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati laborum ad ullam iste perspiciatis eum et est
+            adipisci asperiores, repellendus a. Pariatur fuga nulla cupiditate ducimus nam. Ipsum, aliquid officia?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, obcaecati ducimus, distinctio alias sit
+            deleniti exercitationem error, sequi iste blanditiis perspiciatis quasi impedit esse placeat libero? Officia
+            velit laudantium natus?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A magnam tempora voluptatum iusto, voluptate similique
+            tempore laudantium eius, aperiam rerum ad veritatis fugit dolor optio, accusamus enim vero velit sit!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit maxime temporibus quasi quod nam, recusandae
+            aspernatur? Molestiae asperiores rem saepe dignissimos vero, ut fugiat officiis maxime repellendus velit minus
+            quod!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla iure unde impedit, itaque voluptas quis aliquam
+            commodi molestias a consequatur voluptatum quaerat necessitatibus nemo, et libero voluptatem culpa officiis ab!
+            <br><br><br><br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga commodi reiciendis maiores tenetur repudiandae
+            quisquam cupiditate! Vel rerum, doloremque, in saepe porro dolor mollitia, asperiores aliquid velit illum
+            accusamus nam?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At suscipit in minus eum beatae iste impedit quia,
+            obcaecati eius porro aliquid, sapiente modi ad, rem adipisci excepturi tenetur laborum iure.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati laborum ad ullam iste perspiciatis eum et est
+            adipisci asperiores, repellendus a. Pariatur fuga nulla cupiditate ducimus nam. Ipsum, aliquid officia?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, obcaecati ducimus, distinctio alias sit
+            deleniti exercitationem error, sequi iste blanditiis perspiciatis quasi impedit esse placeat libero? Officia
+            velit laudantium natus?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A magnam tempora voluptatum iusto, voluptate similique
+            tempore laudantium eius, aperiam rerum ad veritatis fugit dolor optio, accusamus enim vero velit sit!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit maxime temporibus quasi quod nam, recusandae
+            aspernatur? Molestiae asperiores rem saepe dignissimos vero, ut fugiat officiis maxime repellendus velit minus
+            quod!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla iure unde impedit, itaque voluptas quis aliquam
+            commodi molestias a consequatur voluptatum quaerat necessitatibus nemo, et libero voluptatem culpa officiis ab!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga commodi reiciendis maiores tenetur repudiandae
+            quisquam cupiditate! Vel rerum, doloremque, in saepe porro dolor mollitia, asperiores aliquid velit illum
+            accusamus nam?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At suscipit in minus eum beatae iste impedit quia,
+            obcaecati eius porro aliquid, sapiente modi ad, rem adipisci excepturi tenetur laborum iure.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati laborum ad ullam iste perspiciatis eum et est
+            adipisci asperiores, repellendus a. Pariatur fuga nulla cupiditate ducimus nam. Ipsum, aliquid officia?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, obcaecati ducimus, distinctio alias sit
+            deleniti exercitationem error, sequi iste blanditiis perspiciatis quasi impedit esse placeat libero? Officia
+            velit laudantium natus?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A magnam tempora voluptatum iusto, voluptate similique
+            tempore laudantium eius, aperiam rerum ad veritatis fugit dolor optio, accusamus enim vero velit sit!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit maxime temporibus quasi quod nam, recusandae
+            aspernatur? Molestiae asperiores rem saepe dignissimos vero, ut fugiat officiis maxime repellendus velit minus
+            quod!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla iure unde impedit, itaque voluptas quis aliquam
+            commodi molestias a consequatur voluptatum quaerat necessitatibus nemo, et libero voluptatem culpa officiis ab!
+        </div>
+    </body>
+
+</html>
