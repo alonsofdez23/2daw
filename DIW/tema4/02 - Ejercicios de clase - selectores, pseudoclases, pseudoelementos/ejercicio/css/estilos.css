@@ -1,0 +1,76 @@
+p {
+    color:#666;
+    font-size: 1em;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    text-align:justify;
+    margin-left:100px;
+    margin-right:40px;
+}
+
+section {
+    border-top: solid;
+    border-top-width: 2px;
+    border-top-color: #ef3e67;
+    /*Igual a las tres instrucciones superiores --> border-top: 2px solid #ef3e67;*/
+    padding-bottom: 12px;
+}
+
+h1, h2, h3 {
+    color: #3bc1cd;
+    font-family: "Palatino Linotype", Times, serif;
+}
+
+h1 {
+    font-size: 2.2em;
+    margin-left:40px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-left:60px;
+}
+
+h3 {
+    font-size: 1.4em;
+    margin-left:80px;
+}
+
+.atencion{
+    color:#000;
+    border: 2px dashed #ef3e67;
+    background-color: #e8bec8;
+    margin-top: 25px;
+    margin-bottom: 35px;
+    padding: 20px;
+}
+
+.atencion strong{
+    color: #ef3e67;
+}
+
+#cuerpo{
+    background-color:#e8bec8;
+    background-image: url(../imagenes/fondo.jpg);
+    background-repeat: repeat-y;
+    background-position: center top;
+    width:80%;
+    margin: 0 auto;
+}
+
+header img{
+    width: 100%;
+}
+
+footer{
+    border-top: 2px solid #ef3e67;
+    background-color: #666;
+    padding:20px;
+    text-align:center;
+    color:#fff;
+}
+
+h2+p {
+    color: #444;
+    font-size: 1.2em;
+    line-height: 120%;
+}

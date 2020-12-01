@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario</title>
+        <style>
+            div,select {
+            margin: 8px;
+            }
+            /* Etiquetas para entradas marcadas */
+            input:checked + label {
+            color: red;
+            }
+            /* Elemento Radio, cuando está marcado */
+            input[type="radio"]:checked {
+            box-shadow: 0 0 0 3px orange;
+            }
+            /* Elemento Checkbox, cuando está marcado */
+            input[type="checkbox"]:checked {
+            box-shadow: 0 0 0 3px hotpink;
+            }
+            /* Elementos Option, cuando se seleccionan */
+            option:checked {
+            box-shadow: 0 0 0 3px lime;
+            color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <input type="radio" name="my-input" id="yes">
+            <label for="yes">Yes</label>
+
+            <input type="radio" name="my-input" id="no">
+            <label for="no">No</label>
+        </div>
+
+        <div>
+            <input type="checkbox" name="my-checkbox" id="opt-in">
+            <label for="opt-in">Check me!</label>
+        </div>
+
+        <select name="my-select" id="fruit">
+            <option value="opt1">Apples</option>
+            <option value="opt2">Grapes</option>
+            <option value="opt3">Pears</option>
+        </select>
+    </body>
+</html>
