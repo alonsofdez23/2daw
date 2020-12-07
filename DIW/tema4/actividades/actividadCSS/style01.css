@@ -1,9 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', 'sans-serif';
+}
 div {
     width: 200px;
     height: 100px;
-    background-color: gray;
+    background-color: rgba(200, 200, 200, 1);
     margin-top: 20px;
     margin-left: 20px;
+    font-size: 1.4em;
+    display: inline-flex;
+}
+p {
+    margin: 0;
+    width: 200px;
+    line-height: 100px;
+    text-align: center;
+}
+
+h2 {
+    text-shadow: 10px 10px 1px purple, 10px -10px 1px orange, -10px 20px 1px pink, -10px -20px 1px green;
+    opacity: 40%;
+    margin-left: 20px;
+    margin-top: 30px;
 }
 
 #a {
