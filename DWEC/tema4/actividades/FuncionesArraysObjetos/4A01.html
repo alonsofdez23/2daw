@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 1</title>
+        <style>
+            div {
+                border: 1px solid black;
+                width: 450px;
+                padding: 10px 10px 10px 10px;
+            }
+            h4 {
+                margin-top: 0px;
+            }
+        </style>
+        <script>
+            function cambiarBase() {
+                var num = Number(document.getElementById("num").value);
+                var base = Number(document.getElementById("base").value);
+                var res = num.toString(base);
+
+                document.getElementById("res").value = res;
+            }
+
+            function cambiarBase10() {
+                var nume = document.getElementById("nume").value;
+                var basex = Number(document.getElementById("basex").value);
+                var res2 = parseInt(nume, basex);
+
+                document.getElementById("res2").value = res2;
+            }
+        </script>
+    </head>
+    <body>
+        <h3>1. Crea un script que permita cambiar de base</h3>
+        <div>
+            <h4>Convertir de base 10 a base X</h4>
+            <label for="num">Introduzca un número en base 10</label>
+            <input type="text" name="num" id="num"/>
+            <br>
+            <label for="base">Introduzca una base entre 2 y 36</label>
+            <input type="text" name="base" id="base" size="2"/>
+            <br>
+            <input type="button" value="Convertir" onclick="cambiarBase();"/>
+            <input type="text" name="res" id="res"/>
+        </div>
+        <br>
+        <div>
+            <h4>Convertir de base X a base 10</h4>
+            <label for="nume">Introduzca un número</label>
+            <input type="text" name="nume" id="nume"/>
+            <br>
+            <label for="basex">Introduzca la base en la que se encuentra</label>
+            <select name="lista" id="basex">
+                <option value="" disabled selected hidden> - </option>
+                <option value="2">2</option>
+                <option value="5">5</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="10">10</option>
+                <option value="14">14</option>
+                <option value="16">16</option>
+                <option value="20">20</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="28">28</option>
+                <option value="30">30</option>
+                <option value="32">32</option>
+                <option value="36">36</option>
+            </select>
+            <br>
+            <input type="button" value="Convertir" onclick="cambiarBase10();">
+            <input type="text" name="texto" id="res2">
+        </div>
+    </body>
+</html>

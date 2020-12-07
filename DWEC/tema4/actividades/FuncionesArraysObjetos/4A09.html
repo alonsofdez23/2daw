@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 9</title>
+    <script>
+        function tabla() {
+            var arrayNom = [];
+            var nom = "";
+            var arrayNot = [];
+            var nota = "";
+            while (nom != "0" && nota != "x") {
+                nom = prompt("Introduce el nombre del alumno, pulsa 0 para parar");
+                if (nom != "0") {
+                    arrayNom.push(nom);
+                }
+                nota = prompt("Introduce la nota, pulsa x para parar");
+                if (nota != "x") {
+                    arrayNot.push(nota);
+                }
+            }
+            var arrayTotal = [arrayNom, arrayNot];
+
+            document.write("<table border='1'><thead><td>Nombre alumno</td><td>Nota</td></thead><tbody>")
+            for (let i = 0; i < arrayNom.length; i++) {
+                document.write("<tr>")
+                for (let j = 0; j < arrayNot.length; j++) {
+                    document.write("<td>" + arrayTotal[j][i] + "</td>")
+                } 
+            }
+            document.write("</tbody></table>");
+        }
+
+    </script>
+</head>
+<body>
+    <h3>
+        9. Crear una array multidimensional que recoja los nombres de 5 alumnos y las notas obtenidas 
+        en tres módulos. Dicha información será introducida por el usuario y una vez finalizada la 
+        recogida de datos se mostrará el contenido del array en forma de tabla.
+    </h3>
+    <input type="button" value="Mostrar tabla" onclick="tabla();">
+</body>
+</html>

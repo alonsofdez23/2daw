@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 2</title>
+        <script>
+            function iniciar() {
+                while (true) {
+                    var precio = Number(prompt("Introduce tu precio sin impuestos"));
+                    var producto = prompt("Introduce el tipo de producto");
+                    if (producto == "") {
+                        producto = 0;
+                        break;
+                    } else {
+                        producto = Number(producto);
+                        if (isNaN(precio) || isNaN(producto)) {
+                            alert("El tipo de producto o el precio no es válido");
+                        } else {
+                            if (producto < 1 && producto > 3) {
+                                alert("El tipo de producto tiene que ser 1, 2 o 3")
+                            }
+                            else {
+                                break;
+                            }
+                        }
+                    }
+                }
+
+                obtenerImporteConImpuestos(precio, producto);
+            }
+
+            function obtenerImporteConImpuestos(price, product) {
+                switch (product) {
+                    case 0:
+                        document.write("<p>El precio del producto es " + price + " y tiene un tipo de impuesto del 21%</p>");
+                        document.write("<p>El precio final del producto es " + (price * 1.21).toFixed(2) + "</p>");
+                        break;
+                    case 1:
+                        document.write("<p>El precio del producto es " + price + " y tiene un tipo de impuesto del 21%</p>");
+                        document.write("<p>El precio final del producto es " + (price * 1.21).toFixed(2) + "</p>");
+                        break;
+                    case 2:
+                        document.write("<p>El precio del producto es " + price + " y tiene un tipo de impuesto del 10%</p>");
+                        document.write("<p>El precio final del producto es " + (price * 1.1).toFixed(2) + "</p>");
+                        break;
+                    case 3:
+                        document.write("<p>El precio del producto es " + price + " y tiene un tipo de impuesto del 5%</p>");
+                        document.write("<p>El precio final del producto es " + (price * 1.05).toFixed(2) + "</p>");
+                        break;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h3>
+            2. Crea un script donde declares una función obtenerImporteConImpuestos que reciba dos 
+            parámetros: el importe sin impuestos (numérico) y el tipo de producto (numérico entero). 
+            La  función  debe  mostrar  por  pantalla  el  importe  sin  impuestos  más  el  21%  si  
+            el  tipo  de  producto es 1, ó el importe sin impuestos más el 10% si el tipo de producto 
+            es 2, ó el importe sin  impuestos  más  el  5%  si  el  tipo  de  producto  es  3.  Si  
+            el  usuario  no  especifica  el  tipo  de  producto,  consideramos  que  es  de  tipo  1.  
+            Devolver  la  cantidad  con  dos  cifras  decimales.  (Función declarada)
+        </h3>
+        <input type="button" value="Mostrar el precio" onclick="iniciar()">
+    </body>
+</html>

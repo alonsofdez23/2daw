@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 7</title>
+    <script>
+        function iniciar() {
+            var palabra = "";
+            var array = [];
+
+            while (palabra != "0") {
+                palabra = prompt("Introduce tu palabra, cuando quieras acabar pon un 0");
+                if (palabra != "0") {
+                    array.push(palabra);
+                }
+            }
+
+            var arrayO = [...array];
+
+            document.write("<p>Tus palabras son: " + array + "</p>");
+            document.write("<p>Tus palabras al reves son: " + array.reverse() + "</p>");
+            document.write("<p>Tu primera palabra es: " + arrayO[0] + "</p>");
+            document.write("<p>Tu última palabra es: " + arrayO[arrayO.length - 1] + "</p>");
+            document.write("<p>Tu número de palabras es: " + arrayO.length + "</p>");
+            document.write("<p>Tus palabras ordenadas ascendentes son: " + arrayO.sort() + "</p>");
+            document.write("<p>Tus palabras ordenadas descendentes son: " + arrayO.sort((a, b) => b.localeCompare(a)) + "</p>");
+        }
+    </script>
+</head>
+<body>
+    <h3>
+        7.Crea  un  script  que  tome  una  serie  de  palabras  ingresadas  por  el  usuario  
+        y  almacene  esas  palabras en un array. Posteriormente, manipula ese array para mostrar 
+        en una nueva ventana los siguientes datos:<br>
+        •Todas las palabras.<br>
+        •Todas las palabras colocadas al revés.<br>
+        •La primera palabra ingresada por el usuario<br>
+        •La última palabra ingresada por el usuario<br>
+        •El número de palabras presentes en el array<br>
+        •Las palabras ordenadas de la 'a' a la 'z' <br>
+        •Las palabras Ordenadas de la 'z' a la 'a'
+    </h3>
+    <input type="button" value="Iniciar" onclick="iniciar();">
+</body>
+</html>
