@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 11</title>
-    <script>
-        function iniciar() {
-            var array = Array.of(1, 2.3, 3, 4, 5);
-            document.write("<p>El array es [" + array + "]</p>");
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 11</title>
+        <script>
+            function iniciar() {
+                var array = Array.of(1, 2.3, 3, 4, 5);
+                document.write(`<p>El array es [${array}]</p>`);
 
-            var comprueba = array.filter((x) => Number.isInteger(x) && x > 0);
-            if (comprueba.length == array.length) {
-                document.write("<p>El array contiene números enteros positivos</p>");
-            } else {
-                document.write("<p>El array no contiene números enteros positivos</p>");
+                var comprueba = array.filter((x) => Number.isInteger(x) && x > 0);
+                if (comprueba.length == array.length) {
+                    document.write("<p>El array contiene números enteros positivos</p>");
+                } else {
+                    document.write("<p>El array no contiene números enteros positivos</p>");
+                }
+
+                var triple = array.map((x) => (x ** 3).toFixed());
+                document.write(`<p>El array elevado a tres es [${triple}]</p>`);
+
+                var multi = array.reduce((a, b) => a * b);
+                document.write(`<p>El resultado de multiplicar todo el array es: ${multi}</p>`);
             }
-
-            var triple = array.map((x) => (x ** 3).toFixed());
-            document.write("<p>El array elevado a tres es [" + triple + "]</p>");
-
-            var multi = array.reduce((a, b) => a * b);
-            document.write("<p>El resultado de multiplicar todo el array es: " + multi + "</p>");
-        }
-    </script>
-</head>
-<body>
-    <h3>
-        11. Usando los nuevos métodos de los arrays: <br>
-        •Crea un vector con 5 valores numéricos.<br>
-        •Comprueba si son todos enteros positivos.<br>
-        •Devuelve en un nuevo array el triple sus valores.<br>
-        •Calcula el resultado de multiplicar todos los valores del nuevo array
-    </h3>
-    <input type="button" value="Iniciar" onclick="iniciar();">
-</body>
+        </script>
+    </head>
+    <body>
+        <h3>
+            11. Usando los nuevos métodos de los arrays:
+            <ul>
+                <li>Crea un vector con 5 valores númericos.</li>
+                <li>Comprueba si son todos enteros positivos.</li>
+                <li>Devuelve en un nuevo array el triple de sus valores.</li>
+                <li>Calcula el resultado de multiplicar todos los valores del nuevo array.</li>
+            </ul>
+        </h3>
+        <input type="button" value="Iniciar" onclick="iniciar()">
+    </body>
 </html>

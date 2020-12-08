@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 10</title>
-    <script>
-        function iniciar() {
-            var array = new Array(10);
-            for (let i = 0; i < array.length; i++) {
-                array[i] = (Math.random() * 10).toFixed();
-            }
-            document.write("<p>Tu array es [" + array + "]</p>");
-            document.write("<p>Tu array con valores menores de 8 es [" + array.filter((x) => x < 8) + "]</p>");
-
-            for (const i in array) {
-                if (array[i] % 2 != 0) {
-                    array[i] = "impar"
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 10</title>
+        <script>
+            function iniciar() {
+                var array = new Array(10);
+                for (let i = 0; i < array.length; i++) {
+                    array[i] = (Math.random() * 10).toFixed();
                 }
+                document.write(`<p>Tu array es [${array}]</p>`);
+                document.write(`<p>Tu array con valores menores de 8 es [${array.filter((x) => x < 8)}]</p>`);
+
+                for (const i in array) {
+                    if (array[i] % 2 != 0) {
+                        array[i] = "impar"
+                    }
+                }
+                document.write(`<p>Tu nuevo array es [${array}]</p>`);
             }
-            document.write("<p>Tu nuevo array es [" + array + "]</p>");
-        }
-    </script>
-</head>
-<body>
-    <h3>
-        10.Usando los nuevos métodos de los arrays:<br>
-        •Crea un array de diez números aleatorios entre 0 y 10.<br>
-        •Devuelve un array con los valores menores a 8.<br>
-        •Intercambia los valores impares por la cadena “impar”.
-    </h3>
-    <input type="button" value="Iniciar" onclick="iniciar();">
-</body>
+        </script>
+    </head>
+    <body>
+        <h3>
+            10.Usando los nuevos métodos de los arrays:
+            <ul>
+                <li>Crea un array de diez números aleatorios entre 0 y 10.</li>
+                <li>Devuelve un array con los valores menores a 8.</li>
+                <li>Intercambia los valores impares por la cadena "impar"</li>
+            </ul>
+        </h3>
+        <input type="button" value="Iniciar" onclick="iniciar()">
+    </body>
 </html>

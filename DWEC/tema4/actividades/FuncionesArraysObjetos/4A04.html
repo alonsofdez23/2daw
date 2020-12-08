@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 4</title>
-    <script>
-        function iniciar() {
-            var array = [];
-            var array2 = [];
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 4</title>
+        <script>
+            function iniciar() {
+                var array = [];
+                var array2 = [];
 
-            document.write("<h4>Mi array es:</h4>")
-            for (let i = 0; i < 10; i++) {
-                array[i] = (Math.random() * 1000).toFixed();
-                document.write("<p>" + array[i] + "</p>");
-            }
-
-            document.write("<h4>Mi nuevo array es:</h4>");
-            for (let j = 0; j < 10; j++) {
-                while (true) {
-                    var num = (Math.random() * 1000).toFixed();
-                    if (array.indexOf(num) == -1) {
-                        array2[j] = num;
-                        break;
-                    }
+                document.write("<h3>Primer array:</h3>")
+                for (let i = 0; i < 10; i++) {
+                    array[i] = (Math.random() * 1000).toFixed();
+                    document.write(`<p>${array[i]}</p>`);
                 }
-                document.write("<p>" + array2[j] + "</p>");
+
+                document.write("<h3>Segundo array:</h3>");
+                for (let j = 0; j < 10; j++) {
+                    while (true) {
+                        var num = (Math.random() * 1000).toFixed();
+                        if (array.indexOf(num) == -1) {
+                            array2[j] = num;
+                            break;
+                        }
+                    }
+                    document.write(`<p>${array2[j]}</p>`);
+                }
             }
-        }
-    </script>
-</head>
-<body>
-    <h3>
-        4.Crear un vector de 10 elementos con valores aleatorios comprendidos entre 0 y 1000. 
-        Buscar el menor y el mayor. Generar otro vector a partir de él que deje fuera dichos valores
-    </h3>
-    <input type="button" value="Empezar" onclick="iniciar();" />
-</body>
+        </script>
+    </head>
+    <body>
+        <h3>
+            4.Crear un vector de 10 elementos con valores aleatorios comprendidos entre 0 y 1000. 
+            Buscar el menor y el mayor. Generar otro vector a partir de él que deje fuera dichos valores
+        </h3>
+        <input type="button" value="Empezar" onclick="iniciar();" />
+    </body>
 </html>

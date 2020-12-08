@@ -1,44 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 13</title>
+        <script>
+            function iniciar() {
+                function Vehiculo(marca, modelo, color, anyo) {
+                    this.marca = marca;
+                    this.modelo = modelo;
+                    this.color = color;
+                    this.anyo = anyo;
+                }
+        
+                var vehiculo1 = new Vehiculo("Ferrari", "Scaglietti", "Rojo", 2010);
+                var vehiculo2 = new Vehiculo("BMW", "Z4", "Blanco", 2010);
+                var vehiculo3 = new Vehiculo("Seat", "Toledo", "Azul", 1999);
+                var vehiculo4 = new Vehiculo("Fiat", "500", "Verde", 1995);
+                var arrayVehiculos = [vehiculo1, vehiculo2, vehiculo3, vehiculo4];
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 13</title>
-    <script>
-        function iniciar() {
-            function Vehiculo(marca, modelo, color, anyo) {
-                this.marca = marca;
-                this.modelo = modelo;
-                this.color = color;
-                this.anyo = anyo;
+                document.write("<table><thead><th>MARCA</th><th>MODELO</th><th>COLOR</th><th>AÑO FABRICACIÓN</th></thead><tbody>");
+                for (i = 0; i < arrayVehiculos.length; i++) {
+                    document.write(`<tr><td>${arrayVehiculos[i].marca}</td>
+                        <td>${arrayVehiculos[i].modelo}</td>
+                        <td>${arrayVehiculos[i].color}</td>
+                        <td>${arrayVehiculos[i].anyo}</td></tr>`);
+                }
+                document.write("</tbody></table>");
             }
-    
-            var vehiculo1 = new Vehiculo("Ferrari", "Scaglietti", "Rojo", 2010);
-            var vehiculo2 = new Vehiculo("BMW", "Z4", "Blanco", 2010);
-            var vehiculo3 = new Vehiculo("Seat", "Toledo", "Azul", 1999);
-            var vehiculo4 = new Vehiculo("Fiat", "500", "Verde", 1995);
-            var arrayVehiculos = [vehiculo1, vehiculo2, vehiculo3, vehiculo4];
+        </script>
+    </head>
 
-            document.write("<table border='1' align='center'><thead><th>MARCA</th><th>MODELO</th><th>COLOR</th><th>AÑO FABRICACIÓN</th></thead><tbody>");
-            for (i = 0; i < arrayVehiculos.length; i++) {
-                document.write("<tr><td>" + arrayVehiculos[i].marca + "</td><td>" +
-                    arrayVehiculos[i].modelo + "</td><td>" + arrayVehiculos[i].color +
-                    "</td><td>" + arrayVehiculos[i].anyo + "</td></tr>");
-            }
-            document.write("</tbody></table>");
-        }
-    </script>
-</head>
-
-<body>
-    <h3>
-        13. Utilice el código empleado para la generación de las instancias del objeto Vehículo, y modifíquelo para que
-        los valores de cada una de sus propiedades se impriman en una tablaHTML. Utilice la generación de código HTML
-        desde código JavaScript. Cada instancia delobjeto debe ocupar una línea y el valor de cada propiedad debe ocupar
-        una celda de dicha línea.
-    </h3>
-    <input type="button" value="Mostrar tabla" onclick="iniciar();">
-</body>
-
+    <body>
+        <h3>
+            13. Utilice el código empleado para la generación de las instancias del objeto Vehículo, y modifíquelo para que
+            los valores de cada una de sus propiedades se impriman en una tablaHTML. Utilice la generación de código HTML
+            desde código JavaScript. Cada instancia delobjeto debe ocupar una línea y el valor de cada propiedad debe ocupar
+            una celda de dicha línea.
+        </h3>
+        <input type="button" value="Mostrar tabla" onclick="iniciar()">
+    </body>
 </html>

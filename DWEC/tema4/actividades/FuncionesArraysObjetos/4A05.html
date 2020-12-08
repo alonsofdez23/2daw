@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 5</title>
-    <script>
-        function iniciar() {
-            function arrayCopia(array) {
-                array.pop();
-                array.shift();
-                
-                document.write("<h4>Mi nuevo array es:</h4>")
-                for (let i = 0; i < array.length; i++) {
-                    document.write("<p>" + array[i] + "</p>");   
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 5</title>
+        <script>
+            function iniciar() {
+                function arrayCopia(array) {
+                    array.pop();
+                    array.shift();
+                    
+                    document.write("<h3>Mi nuevo array es:</h3>")
+                    for (let i = 0; i < array.length; i++) {
+                        document.write(`<p>${array[i]}</p>`);   
+                    }
                 }
-            }
 
-            var array = [];
+                var array = [];
 
-            document.write("<h4>Mi array es:</h4>")
-            for (let i = 0; i < 10; i++) {
-                array[i] = (Math.random() * 1000).toFixed();
-                document.write("<p>" + array[i] + "</p>");
+                document.write("<h3>Mi array es:</h3>")
+                for (let i = 0; i < 10; i++) {
+                    array[i] = (Math.random() * 1000).toFixed();
+                    document.write(`<p>${array[i]}</p>`);
+                }
+                
+                Array.prototype.arrayNuevo = arrayCopia(array);
             }
-            
-            Array.prototype.arrayNuevo = arrayCopia(array);
-        }
-    </script>
-</head>
-<body>
-    <h3>
-        5.Realiza los cambios necesarios en el ejercicio anterior para que la última acción 
-        de generar un nuevo vector a partir de los valores de otro, dejando fuera el primer 
-        y último, pase a ser un método del objeto Array
-    </h3>
-    <input type="button" value="Generar" onclick="iniciar();">
-</body>
+        </script>
+    </head>
+    <body>
+        <h3>
+            5.Realiza los cambios necesarios en el ejercicio anterior para que la última acción 
+            de generar un nuevo vector a partir de los valores de otro, dejando fuera el primer 
+            y último, pase a ser un método del objeto Array
+        </h3>
+        <input type="button" value="Generar" onclick="iniciar()">
+    </body>
 </html>

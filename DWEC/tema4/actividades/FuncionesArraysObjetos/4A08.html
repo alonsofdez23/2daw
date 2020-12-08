@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 8</title>
-</head>
-<body>
-    <h3>
-        8. A  partir  del  siguiente  array,  var  valores  =  [true,  5,  false,  "hola",  "adios",  2],  
-        muéstralo  ordenado por pantalla. Comenta por qué sale ese orden
-    </h3>
-    <script>
-        var valores = [true, 5, false, "hola", "adios", 2];
-        document.write("<p>El array ordenado es [" + valores.sort() + "]</p>");
-        document.write(
-            "<p>Sale de esta manera porque a final el método sort() cogen los elementos del array como cadenas" + 
-            "y los empieza a comparar por su número en Unicode</p>"
-            )
-    </script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 8</title>
+    </head>
+    <body>
+        <h3>
+            8. A  partir  del  siguiente  array,  var  valores  =  [true,  5,  false,  "hola",  "adios",  2],  
+            muéstralo  ordenado por pantalla. Comenta por qué sale ese orden
+        </h3>
+        <script>
+            var valores = [true, 5, false, "hola", "adios", 2];
+            document.write(`<p>El array ordenado es [${valores.sort()}]</p>`);
+            document.write(`<p>Sale de esta manera porque el método sort() coge los elementos
+                del array como cadenas y los ordena por su número en Unicode</p>`)
+        </script>
+    </body>
 </html>

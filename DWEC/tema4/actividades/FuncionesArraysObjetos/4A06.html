@@ -1,75 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 6</title>
-    <script>
-        var array = [];
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 6</title>
+        <script>
+            var array = [];
 
-        for (let i = 1; i <= 21; i++) {
-            if (i % 2 != 0) {
-                array.push(i);
+            for (let i = 1; i <= 21; i++) {
+                if (i % 2 != 0) {
+                    array.push(i);
+                }
             }
-        }
 
-        function metodoA() {
-            document.write("<p>Tu array es [" + array + "]</p>");
-            var sum = array.reduce((a, b) => a + b, 0);
-            document.write("<p>El sumatorio de todos los elementos es: " + sum + "</p>");
-        }
-
-        function metodoB() {
-            document.write("<p>Tu array es [" + array + "]</p>");
-            document.write("<p>Tu nuevo array es [" + array.reverse() + "]</p>");
-        }
-
-        function metodoC() {
-            document.write("<p>Tu array es [" + array + "]</p>");
-            var valor = Number(prompt("Introduce un número:"));
-            var posicion = array.indexOf(valor);
-            if (posicion != -1) {
-                document.write("<p>Tu valor está en la posicion " + posicion + "</p>");
-            } else {
-                alert("Tu valor no está en el array");
+            function metodoA() {
+                document.write(`<p>Tu array es [${array}]</p>`);
+                var sum = array.reduce((a, b) => a + b, 0);
+                document.write(`<p>El sumatorio de todos los elementos es: ${sum}</p>`);
             }
-        }
 
-        function metodoD() {
-            document.write("<p>Tu array es [" + array + "]</p>");
-            var valor = Number(prompt("Introduce un número:"));
-            var posicion = array.indexOf(valor);
-            if (posicion != -1) {
-                delete array[posicion];
-                document.write("<p>Tu nuevo array es [" + array + "]</p>");
-            } else {
-                alert("Tu valor no está en el array");
+            function metodoB() {
+                document.write(`<p>Tu array es [${array}]</p>`);
+                document.write(`<p>Tu nuevo array es [${array.reverse()}]</p>`);
             }
-        }
 
-        function metodoE() {
-            document.write("<p>Tu array es [" + array + "]</p>");
-            var asc = array.sort((a, b) => a - b);
-            document.write("<p>Tu array ordenado ascendente es [" + asc + "]</p>");
-            var desc = array.sort((a, b) => b - a);
-            document.write("<p>Tu array ordenado descendente es [" + desc + "]</p>");
-        }
-    </script>
-</head>
-<body>
-    <h3>
-        6.Crea un array con los números impares del 1 al 21. <br>
-        a.Calcula el sumatorio de dichos números impares e imprime el resultado. <br>
-        b.Muestra en orden inverso el array creado anteriormente.<br>
-        c.Lea un valor que escriba el usuario y búsquelo en el array. Indique si la búsqueda 
-        tuvo éxito indicando la posición o si no tuvo éxito.<br>
-        d.En caso de tener éxito, borra su valor.<br>
-        e.Muéstrelo ordenado de forma ascendente, y a continuación de forma descendente.
-    </h3>
-    <input type="button" value="A" onclick="metodoA();">
-    <input type="button" value="B" onclick="metodoB();">
-    <input type="button" value="C" onclick="metodoC();">
-    <input type="button" value="D" onclick="metodoD();">
-    <input type="button" value="E" onclick="metodoE();">
-</body>
+            function metodoC() {
+                document.write(`<p>Tu array es [${array}]</p>`);
+                var valor = Number(prompt("Introduce un número"));
+                var posicion = array.indexOf(valor);
+                if (posicion != -1) {
+                    document.write(`<p>Tu valor está en la posicion ${posicion}</p>`);
+                } else {
+                    alert("Tu valor no está en el array");
+                }
+            }
+
+            function metodoD() {
+                document.write(`<p>Tu array es [${array}]</p>`);
+                var valor = Number(prompt("Introduce un número"));
+                var posicion = array.indexOf(valor);
+                if (posicion != -1) {
+                    delete array[posicion];
+                    document.write(`<p>Tu nuevo array es [${array}]</p>`);
+                } else {
+                    alert("Tu valor no está en el array");
+                }
+            }
+
+            function metodoE() {
+                document.write(`<p>Tu array es [${array}]</p>`);
+                var asc = array.sort((a, b) => a - b);
+                document.write(`<p>Tu array ordenado ascendente es [${asc}]</p>`);
+                var desc = array.sort((a, b) => b - a);
+                document.write(`<p>Tu array ordenado descendente es [${desc}]</p>`);
+            }
+        </script>
+    </head>
+    <body>
+        <h3>
+            6.Crea un array con los números impares del 1 al 21. <br>
+            a.Calcula el sumatorio de dichos números impares e imprime el resultado. <br>
+            b.Muestra en orden inverso el array creado anteriormente.<br>
+            c.Lea un valor que escriba el usuario y búsquelo en el array. Indique si la búsqueda 
+            tuvo éxito indicando la posición o si no tuvo éxito.<br>
+            d.En caso de tener éxito, borra su valor.<br>
+            e.Muéstrelo ordenado de forma ascendente, y a continuación de forma descendente.
+        </h3>
+        <input type="button" value="A" onclick="metodoA();">
+        <input type="button" value="B" onclick="metodoB();">
+        <input type="button" value="C" onclick="metodoC();">
+        <input type="button" value="D" onclick="metodoD();">
+        <input type="button" value="E" onclick="metodoE();">
+    </body>
 </html>
