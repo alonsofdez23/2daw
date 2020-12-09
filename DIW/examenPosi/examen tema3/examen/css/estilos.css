@@ -1,0 +1,153 @@
+@import url(reset.css);
+@font-face {
+    font-family: NerkoOne;
+    src: url(./NerkoOne-Regular.ttf);
+}
+
+header {
+    background-image: url(../imagenes/balones.png);
+    background-repeat: repeat-x;
+}
+
+header a {
+    width: 20%;
+}
+
+header h1 {
+    color: grey;
+    text-shadow: 4px 4px 2px black;
+    text-align: center;
+    font-size: 5em;
+    font-weight: 800;
+    height: 100px;
+    padding-bottom: 50px;
+}
+
+#barra {
+    width: 100%;
+    display: inline-flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-right: 10px;
+}
+
+
+#barra a, aside a {
+    background-color: grey;
+    text-decoration: none;
+    background: url(../imagenes/balon.png) no-repeat;
+    margin-left: 20%;
+    margin: 10%;
+    text-transform: uppercase;
+    color: black;
+}
+
+#barra a:hover, aside a:hover {
+    background-color: #ff0;
+    border-radius: 10px 10px 10px 10px / 20px 20px 20px 20px;
+ /*fondo color #ff0; */
+}
+
+#barra li {
+    background-color: grey;
+    text-align: center;
+    width: 25%;
+    height: 25px;
+    border-radius: 10px 10px 10px 10px / 20px 20px 20px 20px;
+    margin: 10px 10px 10px 40px;
+}
+
+section .title {
+    text-transform: uppercase;
+    background-color: grey;
+    text-align: center;
+    font-size: 3em;
+    font-weight: 200;
+    height: 100px;
+    padding-top: 20px;
+}
+
+#principal {
+}
+
+.jugador {
+}
+
+section h3 {
+
+}
+
+.jugador img {
+
+}
+
+.jugador p {
+
+}
+
+section aside li {
+
+}
+
+aside {
+
+}
+
+aside a {
+
+}
+
+#secundario img {
+
+}
+
+#secundario article p {
+
+}
+
+#secundario h3 {
+
+}
+
+footer {
+/* color de fondo #999 */
+}
+
+footer address {
+ 
+}
+
+footer address::first-line {
+
+}
+
+footer small {
+
+}
+
+footer small p {
+
+}
+
+
+.fuente{
+    font-family: NerkoOne;
+    text-align: center;
+    font-size: 3em;
+    font-weight: 200;
+    height: 100px;
+    padding-top: 20px;
+}
+
+.lider{
+    
+}
+
+
+/* La parte del formulario la haceis desde 0 
+	las cajas de texto:
+En reposo color: #ff0;
+al pasar por lo alto: #0ff;
+Si dejamos el foco: #888;
+*/

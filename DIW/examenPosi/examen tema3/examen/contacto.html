@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Examen práctico</title>
+   
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header>
+    <a href="index.html">
+        <canvas id="lienzo" width="180" height="120">
+            Su navegador no soporta Canvas
+        </canvas>
+    </a>
+    <h1>JUGADORES TOP</h1>
+</header>
+<nav>
+    <ul id="barra">
+        <li><a href="index.html">Jugadores</a></li>
+        <li><a href="#">Mejores Jugadas</a></li>
+        <li><a href="#">Entrenadores</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+</nav>
+<main>
+    <section>
+            <h2 class="title">Formulario</h2>
+            <form method="GET" autocomplete="off" id="miformulario">
+                <fieldset>
+                    <legend>Información personal</legend>
+                        <p><label>Nombre: <input type="text" title="Nombre" name="nombre" id="nombre" placeholder="Introduce tu nombre" required></label></p>
+                        <p><label>Apellidos: <input type="text" name="apellidos" id="apellidos" placeholder="Introduce tus apellidos" required></label></p>
+                        <p><label>Edad: <input type="number" name="edad" id="edad" min="0" max="100" required></label></p>
+                </fieldset>
+                <fieldset>
+                    <legend>Datos de contacto</legend>
+                        <p id="direccion"><label for="textarea">Dirección: </label><textarea  id="textarea" cols="25" rows="3"></textarea></p>
+                        <p><label>Email: <input type="email" name="email" id="email" required></label></p>
+                        <p><label>Web: <input type="url" name="web" id="web"></label></p>
+                        <p><label>Teléfono: <input type="tel" name="telefono" id="telefono"></label></p>
+                </fieldset>
+                <p><input type="submit" id="suscribe" value="Enviar"></p>
+            </form>
+
+            <aside>
+                    <h3>Menu de la web</h3>
+                    <ul>
+                        <li><a href="index.html">Jugadores</a></li>
+                        <li><a href="#">Mejores Jugadas</a></li>
+                        <li><a href="#">Entrenadores</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </aside>
+    </section>
+</main>
+<footer>
+    <address>
+        <p>
+            Fuentes Fidedignas<br />
+            Diario MeMiroYLaMiro<br />
+            España
+        </p>
+    </address>
+    <small>
+        <p>
+            Los cucos &copy; Copyright 2020<br />
+            IES Doñana (Sanlúcar de Barrameda - Cádiz)
+        </p>
+    </small>
+</footer>
+</body>
+</html>
