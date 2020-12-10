@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 1</title>
+        <script>
+            function pulsar(ev) {
+                evento = ev || window.event;
+                pulsado = evento.button;
+                texto = document.getElementById("info");
+                texto.innerHTML = `Valor del último botón del ratón pulsado: ${pulsado}`
+            }
+            window.onload = function () {
+                document.documentElement.onmousedown = pulsar
+            }
+        </script>
+    </head>
+    <body id="body">
+        <h1>
+            1. Realizar un script que cuando pulse el usuario con el botón del ratón en cualquier sitio de la
+            pantalla, identifique si ha pulsado con el botón derecho, izquierdo o la rueda central.
+        </h1>
+        <h3>
+            Pulsa un boton del raton para que aparezca el texto informativo sobre el boton que has pulsado:
+            <ul>
+                <li>Botón izquierdo: 0</li>
+                <li>Rueda central: 1</li>
+                <li>Botón derecho: 2</li>
+            </ul>
+        </h3>
+
+        <p id="info"></p>
+
+    </body>
+</html>
