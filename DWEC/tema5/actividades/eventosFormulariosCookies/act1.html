@@ -5,32 +5,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Actividad 1</title>
         <script>
-            function pulsar(ev) {
-                evento = ev || window.event;
-                pulsado = evento.button;
-                texto = document.getElementById("info");
-                texto.innerHTML = `Valor del último botón del ratón pulsado: ${pulsado}`
+            function pulse(ev) {
+                var event = ev || window.event;
+                switch (event.type) {
+                    case "click":
+                        document.getElementById("info").innerHTML = "Click con el botón izquierdo.";
+                        break;
+                    case "contextmenu":
+                        document.getElementById("info").innerHTML = "Click con el botón derecho.";
+                        break;
+                    case "wheel":
+                        document.getElementById("info").innerHTML = "Click con el scroll central.";
+                        break;
+                    default:
+                        document.getElementById("info").innerHTML = "No has hecho nada";
+                        break;
+                }
             }
             window.onload = function () {
-                document.documentElement.onmousedown = pulsar
+                document.addEventListener('click', pulse);
+                document.addEventListener('contextmenu', pulse);
+                document.addEventListener('wheel', pulse);
             }
         </script>
     </head>
-    <body id="body">
+    <body>
         <h1>
             1. Realizar un script que cuando pulse el usuario con el botón del ratón en cualquier sitio de la
             pantalla, identifique si ha pulsado con el botón derecho, izquierdo o la rueda central.
         </h1>
-        <h3>
-            Pulsa un boton del raton para que aparezca el texto informativo sobre el boton que has pulsado:
-            <ul>
-                <li>Botón izquierdo: 0</li>
-                <li>Rueda central: 1</li>
-                <li>Botón derecho: 2</li>
-            </ul>
-        </h3>
-
+        <h3>Pulsa un boton del raton para que aparezca el texto informativo sobre el boton que has pulsado:</h3>
         <p id="info"></p>
-
     </body>
 </html>

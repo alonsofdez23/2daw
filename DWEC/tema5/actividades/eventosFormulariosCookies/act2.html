@@ -1,68 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 2</title>
-    <style>
-        h1, h3 {
-            text-align: center;
-        }
-
-        #figura {
-            margin: 200px;
-            border: solid 3px gold;
-            background: black;
-            width: 200px;
-            height: 200px;
-            position: absolute;
-        }
-    </style>
-
-    <script>
-        window.onload = function () {
-            document.onkeydown = desplazar;
-        };
-
-        function desplazar(objeto) {
-
-            var tecla = objeto.which;
-
-            var situacionY = document.getElementById("figura").offsetLeft;
-            var situacionX = document.getElementById("figura").offsetTop;
-
-            switch (tecla) {
-                case 37:
-                    figura.style.left = situacionY - 220 + "px";
-                    break;
-                case 38:
-                    figura.style.top = situacionX - 220 + "px";
-                    break;
-                case 39:
-                    figura.style.left = situacionY - 180 + "px";
-                    break;
-                case 40:
-                    figura.style.top = situacionX - 180 + "px";
-                    break;
-                default:
-                    alert("Se ha equivocado, debe pulsar las flechas del teclado");
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 2</title>
+        <style>
+            #figura {
+                margin: 200px;
+                border: solid 3px chocolate;
+                background: brown;
+                width: 200px;
+                height: 200px;
+                position: absolute;
             }
-        }
-    </script>
-</head>
+        </style>
 
-<body>
-    <h1>
-        2. Realizar un script que permita mover una caja dentro de la ventana del navegador tanto con las
-        teclas de desplazamiento del teclado central como con las del teclado numérico.
-    </h1>
+        <script>
+            window.onload = function () {
+                document.addEventListener('keydown', move);
+            };
 
-    <h3>
-        Utiliza las teclas de desplazamiento del teclado central y las del teclado numerico para mover el cuadrado.
-    </h3>
+            function move(ev) {
+                var event = ev || window.event;
+                var tecla = event.key;
 
-    <div id="figura"></div>
-</body>
+                var situacionY = document.getElementById("figura").offsetLeft;
+                var situacionX = document.getElementById("figura").offsetTop;
 
+                switch (tecla) {
+                    case "ArrowLeft":
+                        figura.style.left = situacionY - 220 + "px";
+                        break;
+                    case "ArrowUp":
+                        figura.style.top = situacionX - 220 + "px";
+                        break;
+                    case "ArrowRight":
+                        figura.style.left = situacionY - 180 + "px";
+                        break;
+                    case "ArrowDown":
+                        figura.style.top = situacionX - 180 + "px";
+                        break;
+                    default:
+                        alert("Error, utilice solo las flechas del teclado");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>
+            2. Realizar un script que permita mover una caja dentro de la ventana del navegador tanto con las
+            teclas de desplazamiento del teclado central como con las del teclado numérico.
+        </h1>
+        <h3>Utiliza las teclas de desplazamiento del teclado central y las del teclado numerico para mover el cuadrado.</h3>
+        <div id="figura"></div>
+    </body>
 </html>
