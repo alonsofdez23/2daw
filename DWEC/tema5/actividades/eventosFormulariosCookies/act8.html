@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 8</title>
+        <script>
+            window.onload = function () {
+                document.addEventListener('error', error);
+            }
+
+
+        </script>
+    </head>
+    <body>
+        <h1>
+            8. Realiza el siguiente formulario:
+            <ul>
+                <li>Cuando pulse Haz click para enviar información, se enviará
+                    la información a un correo electrónico en texto plano.</li>
+                <li>Cuando pulse en haz click sobre mí, se redirigirá a la página de google.</li>
+            </ul>
+        </h1>
+        <form action="mailto:direccion@correo.com">
+            <fieldset>
+                <legend>Datos personales</legend>
+                <label for="nombre">Introduce tu nombre:</label>
+                <input type="text" name="nombre" id="nombre" size="50">
+                <br>
+                <label for="mensaje">Mensaje:</label>
+                <textarea name="mensaje" id="mensaje" cols="50" rows="10"></textarea>
+            </fieldset>
+    
+            <label for="radio">Elige un color:</label><br>
+            <input type="radio" name="radio" id="radio" value="r">Rojo<br>
+            <input type="radio" name="radio" id="radio" value="v">Verde<br>
+            <input type="radio" name="radio" id="radio" value="a">Azul<br>
+    
+            <label for="opciones">Selecciona una asignatura:</label>
+            <select name="opciones" id="opc">
+                <option value="mat">Matemáticas</option>
+                <option value="dwec">DWEC</option>
+                <option value="ing">Inglés</option>
+                <option value="dwes">DWES</option>
+                <option value="eie">Empresa</option>
+            </select>
+            <br>
+    
+            <label for="dias">Selecciona los dias con disponibilidad:</label><br>
+            <input type="checkbox" name="dias" id="dias" value="l">Lunes<br>
+            <input type="checkbox" name="dias" id="dias" value="m">Martes<br>
+            <input type="checkbox" name="dias" id="dias" value="x">Miércoles<br>
+            <input type="checkbox" name="dias" id="dias" value="j">Jueves<br>
+            <input type="checkbox" name="dias" id="dias" value="v">Viernes<br>
+    
+            <label for="pref">Selecciona el día preferente:</label>
+            <select name="pref" id="pref">
+                <option value="l">Lunes</option>
+                <option value="m">Martes</option>
+                <option value="x">Miércoles</option>
+                <option value="j">Jueves</option>
+                <option value="v">Viernes</option>
+            </select>
+            <br>
+    
+            <input type="submit" value="Haz clic para enviar información">
+            <input type="reset" value="Comenzar de nuevo">
+            <input type="button" value="Haz clic sobre mi" id="google">
+        </form>
+        <div id="div"></div>
+    </body>
+</html>

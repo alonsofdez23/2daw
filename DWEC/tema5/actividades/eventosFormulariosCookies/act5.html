@@ -6,23 +6,24 @@
         <title>Actividad 5</title>
         <style>
             #img {
-            background: url(./img1.jpg) no-repeat center;
+            background: url(images/img1.jpg) center;
             width: 500px;
             height: 500px;
         }
         </style>
         <script>
             window.onload = function () {
-                document.addEventListener('mousedown', img1);
-                document.addEventListener('mouseup', img2);
+                document.addEventListener('mouseup', img1);
+                document.addEventListener('mousedown', img2);
             };
+            
             function img1(ev) {
                 var event = ev || window.event;
-                document.getElementById("div").style.background = "url(./img1.jpg) no-repeat center";
+                document.getElementById("img").style.background = "url(images/img1.jpg) center";
             }
             function img2(ev) {
                 var event = ev || window.event;
-                document.getElementById("div").style.background = "url(./img2.jpg) no-repeat center";
+                document.getElementById("img").style.background = "url(images/img2.jpg) center";
             }
         </script>
     </head>

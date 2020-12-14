@@ -331,3 +331,36 @@ table {
 	margin-bottom: 50px;
 	font-size: 0.85em;
 }
+
+
+/*A partir de aquí*/
+
+#subForm{
+	font-size: 0.8em;
+}
+
+#subForm .etiq{ /*Tenemos que definir en las etiquetas el class="etiq"*/
+	float:left;
+	width:230px;
+	text-align:right;
+	margin-right: 10px;
+	font-weight: bold;
+}
+
+#suscribe{
+	margin-left: 240px;
+	background-color:#CBD893;
+	font-family: "Century Gothic", "Gill Sans", Arial, sans-serif;
+}
+
+#nombre, #email, #comentarios{
+	background-color: #fbef99;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-size: 90%;
+	width: 50%;
+	margin-top: -3px;
+}
+
+#nombre:focus, #email:focus, #comentarios:focus, #refer:focus{
+	background-color: #FDD041;
+}
