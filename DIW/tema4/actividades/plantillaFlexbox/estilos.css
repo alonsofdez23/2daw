@@ -6,21 +6,139 @@
     box-sizing: border-box;
 }
 
-.contenedor {
-    width: 80%;
-    height: 500px;
-    background: #FF5C29;
-    margin:50px auto;
+#main {
+    background-color: black;
+    height: 800px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.hijo {
-    background: #00B285;
-    width: 200px;
-    height: 100px;
-    color: #fff;
-    margin:30px;
-    padding: 20px;
-    font-size: 40px;
-    text-align: center;
+#nav div:nth-child(1) {
+    background-color: coral;
+    width: 10%;
+    height: 60%;
+    margin: 5px 5px 5px 5px;
 }
 
+#nav div:nth-child(2) {
+    background-color: coral;
+    width: 70%;
+    height: 60%;
+    margin: 5px 5px 5px 5px;
+    flex-grow: 1;
+}
+
+#nav div:nth-child(3) {
+    background-color: coral;
+    width: 10%;
+    height: 60%;
+    margin: 5px 5px 5px 5px;
+}
+
+#head {
+    background-color: orange;
+    width: 96.5%;
+    height: 19%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#head div {
+    background-color: lightgoldenrodyellow;
+    width: 20%;
+    height: 40%;
+}
+
+#centralIzq {
+    background-color: gray;
+    width: 77.5%;
+    height: 69%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#centralIzq div:nth-child(1) {
+    background-color: blue;
+    width: 40%;
+    height: 40%;
+    margin: 5px 5px 5px 5px;
+    flex-shrink: 0;
+}
+
+#centralIzq div:nth-child(2) {
+    background-color: blue;
+    width: 40%;
+    height: 40%;
+    margin: 5px 5px 5px 5px;
+    flex-shrink: 0;
+}
+
+#centralIzq div:nth-child(3) {
+    background-color: blue;
+    width: 40%;
+    height: 40%;
+    margin: 5px 5px 5px 5px;
+    flex-shrink: 0;
+}
+
+#centralIzq div:nth-child(4) {
+    background-color: blue;
+    width: 40%;
+    height: 40%;
+    margin: 5px 5px 5px 5px;
+    flex-shrink: 0;
+}
+
+#centralIzq div:nth-child(5) {
+    background-color: blue;
+    width: 40%;
+    height: 40%;
+    margin: 5px 5px 5px 5px;
+    flex-shrink: 0;
+}
+
+#centralDer {
+    background-color: green;
+    width: 17.5%;
+    height: 69%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#centralDer div:nth-child(1) {
+    background-color: darkgreen;
+    width: 80%;
+    height: 40%;
+    margin: 5px 5px 5px 5px;
+    flex-shrink: 0;
+}
+
+#centralDer div:nth-child(2) {
+    background-color: darkgreen;
+    width: 80%;
+    height: 40%;
+    margin: 5px 5px 5px 5px;
+    flex-shrink: 0;
+}
+
+#footer {
+    background-color: navy;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#footer div {
+    background-color: orange;
+    width: 40%;
+    height: 80%;
+    flex-shrink: 0;
+}
