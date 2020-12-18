@@ -1,39 +1,35 @@
-* {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
 #main {
     background-color: black;
     height: 800px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-#nav div:nth-child(1) {
+#nav {
+    background-color: navy;
+    width: 96.5%;
+    height: 9%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.navLateral {
     background-color: coral;
     width: 10%;
     height: 60%;
     margin: 5px 5px 5px 5px;
 }
 
-#nav div:nth-child(2) {
+#navCentral {
     background-color: coral;
     width: 70%;
     height: 60%;
     margin: 5px 5px 5px 5px;
     flex-grow: 1;
-}
-
-#nav div:nth-child(3) {
-    background-color: coral;
-    width: 10%;
-    height: 60%;
-    margin: 5px 5px 5px 5px;
 }
 
 #head {
@@ -61,39 +57,7 @@
     justify-content: center;
 }
 
-#centralIzq div:nth-child(1) {
-    background-color: blue;
-    width: 40%;
-    height: 40%;
-    margin: 5px 5px 5px 5px;
-    flex-shrink: 0;
-}
-
-#centralIzq div:nth-child(2) {
-    background-color: blue;
-    width: 40%;
-    height: 40%;
-    margin: 5px 5px 5px 5px;
-    flex-shrink: 0;
-}
-
-#centralIzq div:nth-child(3) {
-    background-color: blue;
-    width: 40%;
-    height: 40%;
-    margin: 5px 5px 5px 5px;
-    flex-shrink: 0;
-}
-
-#centralIzq div:nth-child(4) {
-    background-color: blue;
-    width: 40%;
-    height: 40%;
-    margin: 5px 5px 5px 5px;
-    flex-shrink: 0;
-}
-
-#centralIzq div:nth-child(5) {
+.centralIzqItem {
     background-color: blue;
     width: 40%;
     height: 40%;
@@ -110,15 +74,7 @@
     align-items: center;
 }
 
-#centralDer div:nth-child(1) {
-    background-color: darkgreen;
-    width: 80%;
-    height: 40%;
-    margin: 5px 5px 5px 5px;
-    flex-shrink: 0;
-}
-
-#centralDer div:nth-child(2) {
+.centralDerItem {
     background-color: darkgreen;
     width: 80%;
     height: 40%;
@@ -136,7 +92,7 @@
     margin-top: 20px;
 }
 
-#footer div {
+#footerItem {
     background-color: orange;
     width: 40%;
     height: 80%;
