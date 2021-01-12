@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-
-=======
->>>>>>> be32dcfae305fbc24054e1adbf3e9a69cad14938
 #main {
     background-color: black;
     height: 800px;
@@ -13,9 +8,6 @@
     align-items: center;
 }
 
-<<<<<<< HEAD
-#nav > div:nth-child(1) {
-=======
 #nav {
     background-color: navy;
     width: 96.5%;
@@ -26,18 +18,13 @@
 }
 
 .navLateral {
->>>>>>> be32dcfae305fbc24054e1adbf3e9a69cad14938
     background-color: coral;
     width: 10%;
     height: 60%;
     margin: 5px 5px 5px 5px;
 }
 
-<<<<<<< HEAD
-#nav > div:nth-child(2) {
-=======
 #navCentral {
->>>>>>> be32dcfae305fbc24054e1adbf3e9a69cad14938
     background-color: coral;
     width: 70%;
     height: 60%;
@@ -45,16 +32,6 @@
     flex-grow: 1;
 }
 
-<<<<<<< HEAD
-#nav > div:nth-child(3) {
-    background-color: coral;
-    width: 10%;
-    height: 60%;
-    margin: 5px 5px 5px 5px;
-}
-
-=======
->>>>>>> be32dcfae305fbc24054e1adbf3e9a69cad14938
 #head {
     background-color: orange;
     width: 96.5%;
