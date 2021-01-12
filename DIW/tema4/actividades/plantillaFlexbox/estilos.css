@@ -1,10 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
+
 
 #main {
     background-color: black;
@@ -14,14 +8,14 @@
     flex-wrap: wrap;
 }
 
-#nav div:nth-child(1) {
+#nav > div:nth-child(1) {
     background-color: coral;
     width: 10%;
     height: 60%;
     margin: 5px 5px 5px 5px;
 }
 
-#nav div:nth-child(2) {
+#nav > div:nth-child(2) {
     background-color: coral;
     width: 70%;
     height: 60%;
@@ -29,7 +23,7 @@
     flex-grow: 1;
 }
 
-#nav div:nth-child(3) {
+#nav > div:nth-child(3) {
     background-color: coral;
     width: 10%;
     height: 60%;
