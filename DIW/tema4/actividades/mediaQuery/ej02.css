@@ -125,7 +125,6 @@ body
 
     .feature-image
     {
-        visibility: hidden;
         display: none;
     }
 }
