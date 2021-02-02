@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Actividad 16</title>
+        <script src="jquery-3.5.1-descargado.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <script>
+            $(function(){
+                $("#hide").on("click", function() {
+                    $("p").toggle("fast");
+                })
+            });
+        </script>
+    </head>
+
+    <body>
+        <div>
+            <button id="hide">Hide me</button>
+            <p>Párrafo</p>
+        </div>
+    </body>
+</html>

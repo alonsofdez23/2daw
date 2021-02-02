@@ -1,0 +1,10 @@
+h1 {
+    background-color: red;
+    position: absolute;
+    font-size: 30;
+}
+
+div {
+    height: 500px;
+    background-color: gray;
+}
