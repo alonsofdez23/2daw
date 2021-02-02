@@ -1,0 +1,42 @@
+body{background-color: #2F3B40;}
+
+#container{
+    width: 700px;
+    margin: 200px auto;
+}
+
+#imagen{
+    transition: all 1s;
+}
+
+#imagen:hover{
+    /* rotateZ */
+    transform: rotate3d(1,1,0,30deg) ;
+    /* translateZ */
+    
+    /* scaleZ */
+    /*transform: translateZ(200px) scaleZ(2);*/
+}
+
+/* Segunda parte */
+
+/* 
+body{
+    margin-0;
+    background: #eee;
+    display:flex;
+    min-height:100vh;
+}
+.contenedor{
+    margin:auto;
+}
+
+.caja{
+    width:200px;
+    height:200px;
+    background: crimson;
+    transition: all 1s;
+}
+.caja:hover
+
+*/
