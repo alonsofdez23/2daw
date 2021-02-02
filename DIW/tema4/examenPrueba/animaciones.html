@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animaciones</title>
+    <style>
+
+
+        /* GENERALES */
+        * {
+            box-sizing: border-box;
+          }
+
+        /* CABECERA*/
+        .slider{
+          background: url("imagenes/rana.jpg");
+          height: 70vh;
+          background-size: cover;
+          background-position: center;
+          margin-bottom: 3px;
+        }
+
+        /* MENÚ */
+        #menu_horizontal{
+            clear:both;
+            border-bottom: 1px dotted #000;
+            border-top: 1px dotted #000;
+            text-align: center;
+            background: lightgreen;
+            margin-bottom: 3px;
+        }
+
+        #menu_horizontal li{
+            display: inline;
+            padding: 0 5%;
+        }
+
+        #menu_horizontal a{
+            color:#000;
+            text-transform: uppercase;
+            text-decoration:none;
+            padding: 1% 2% 1% 2%;
+            background: lightgrey;
+            border: 1px solid green;
+        }
+
+        #menu_horizontal a:hover{
+            background-color: green;
+        }
+
+        /* CONTENIDO */
+
+        h1{
+            font-size: 400%;
+            text-align: center;
+            margin-bottom: -5%;
+        }
+
+        article{
+            margin: 10% 3% 1% 3%;
+        }
+
+        footer{
+            clear:both;
+            margin-top: 10%;
+        }
+
+/********************** A partir de aquí ****************************/
+        #animacion1 {
+            overflow: hidden;
+            width: 5vw;
+            height: 5px;
+            position: relative;
+            background-color: yellow;
+            animation-name: barratitulo;
+            animation-duration: 4s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes barratitulo {
+            from {
+                background-color: yellow;
+                width: 5vw;
+            }
+
+            to {
+                background-color: green;
+                width: 100%;
+            }
+        }
+
+        .cuadro{
+            width: 50px;
+            height: 50px;
+            background: yellow;
+            margin: 2% 2% 2% 2%;
+            float: left;
+            transition: background-color 2s, rotate 1s;
+        }
+
+        .cuadro:hover {
+            background-color: green;
+            transform: rotate(45deg);
+        }
+
+        .leermas{
+            float:right;
+            padding: 0.8% 2%;
+            border:1px solid black;
+            color: black;
+            text-decoration: none;
+            font-size: 100%;
+            transition: all 5s;
+        }
+
+        .leermas:hover {
+            background-color: green;
+            color: white;
+            width: 30%;
+            font-size: large;
+        }
+
+/************************** Hasta aquí *********************************/
+
+    </style>
+</head>
+<body>
+    <header class="slider">
+    </header>
+    <nav id="menu_horizontal">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="flexbox.html">Flex-Box</a></li>
+            <li><a href="grid.html">Grid</a></li>
+            <li><a href="animaciones.html">Animaciones</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>ANIMALADAS</h1>
+        <section>
+            <article>
+                <h2>Zorro</h2>
+                <div id="animacion1"></div>
+                <div class="cuadro"></div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem sequi sint enim fugiat magni, tempore reprehenderit quas facere temporibus dicta expedita eaque, totam, adipisci cumque ipsam sit autem. Temporibus quam non exercitationem, voluptates sequi accusantium aliquam perferendis nemo eum? Ea impedit sunt commodi repudiandae? Ipsa distinctio nobis fugit, reprehenderit laboriosam velit suscipit placeat earum modi eaque rem provident minima non? Pariatur id laudantium similique voluptatibus. Nostrum optio ipsum sequi esse corrupti culpa iure excepturi amet nemo voluptatem explicabo temporibus expedita, quasi suscipit? Quis error iure delectus, hic necessitatibus nostrum non facilis molestiae excepturi, doloribus fugit sequi tenetur maxime expedita! Accusantium, doloremque obcaecati! Illum laudantium, tempora accusamus provident eligendi delectus. Veniam qui quam adipisci? Eligendi magnam quae officia! Fuga beatae temporibus cumque asperiores. Tempora eligendi laborum necessitatibus totam eum error excepturi, reiciendis, voluptas deleniti laboriosam ut dolorem illo vero quis quos temporibus ducimus cumque? Dolorem repellat recusandae illo vitae quia sequi, officiis vero fuga eos. Sed tempora aut quibusdam dolorum architecto voluptates necessitatibus rem nobis eum harum quas earum, fuga impedit, quo repellat possimus quasi aliquam enim, eligendi expedita accusamus fugiat ea nihil. Unde aliquam molestiae accusantium nobis ullam sit dolor saepe inventore voluptates dicta laudantium enim quasi, voluptatibus fugit at incidunt ratione velit, amet veritatis corporis. Quae illo cupiditate maxime hic blanditiis ex nisi porro nihil nulla. Dicta quidem perspiciatis rerum excepturi laborum numquam qui obcaecati pariatur consequatur quas quod minima aspernatur aliquid id culpa, voluptas sequi? Ullam alias distinctio maiores debitis doloribus optio, dolore nihil repellat, quod animi sequi.</p>
+                <a href="#" class="leermas">Leer más</a>
+            </article>
+            <article>
+                <h2>Elefante</h2>
+                <div id="animacion1"></div>
+                <div class="cuadro"></div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima unde, hic illum facere praesentium repellendus id corrupti error totam vel maiores voluptate rerum et cum voluptatum maxime. Asperiores exercitationem, et veniam commodi, eos ab consequatur magnam debitis, dolorem itaque ipsam molestiae natus iusto sapiente explicabo? Necessitatibus officiis ut sint fugit autem hic fugiat velit at, id eos perferendis accusamus qui ipsa voluptatibus, voluptatem non. Sapiente, minima! Dolor totam minima ad sapiente corporis cumque optio repellat placeat inventore error vero, vitae omnis quidem ab! Beatae veniam pariatur vel modi est porro nihil optio, et ratione deleniti delectus quia impedit explicabo sequi distinctio officiis quidem at magnam! Molestias delectus quod vero, incidunt perferendis cupiditate facilis iure necessitatibus adipisci! Impedit eum exercitationem provident cumque rem atque dolor quibusdam temporibus harum? Totam optio sunt dolorum ipsa, provident neque perferendis exercitationem tempora praesentium. Quae voluptatem quia eligendi dolorem accusamus consectetur odio odit veniam reiciendis, maxime officiis temporibus excepturi beatae suscipit tempora! Iste, necessitatibus. Totam voluptate rerum nisi dignissimos vitae facere quasi cum atque aut sint tempore incidunt voluptatem dolor minus quia, dicta nemo numquam? Architecto facilis laboriosam quidem, dolorum reprehenderit sapiente aut excepturi tempora explicabo earum enim aliquid laudantium, natus adipisci aliquam sunt voluptatem minus recusandae doloremque cum quia laborum a! Excepturi, laborum cum? Quas sed maxime accusamus cum aspernatur labore asperiores vel pariatur aliquid voluptate similique possimus totam reiciendis, itaque dignissimos omnis eos culpa nesciunt impedit fugiat. Tempore repudiandae totam sit, accusantium atque quo. Voluptatem ea aut praesentium expedita beatae? Excepturi expedita dolore iste.</p>
+                <a href="#" class="leermas">Leer más</a>
+            </article>
+            <article>
+                <h2>Bambi</h2>
+                <div id="animacion1"></div>
+                <div class="cuadro"></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia explicabo magnam rem. Accusantium alias voluptatem quam saepe ipsam, distinctio rerum est fugit laboriosam explicabo nesciunt blanditiis ipsum necessitatibus exercitationem excepturi harum nulla inventore quaerat. Eveniet excepturi aspernatur nam suscipit magni doloribus tempora consequuntur impedit assumenda. Culpa, sapiente saepe dolor non officiis eos doloribus illo ad modi nam! Rem, tempora? Ipsam provident asperiores nostrum eum accusamus, hic soluta. Saepe odio, ullam mollitia hic, velit consequuntur ex numquam provident similique minus fugit nemo neque explicabo maxime! In illum expedita incidunt illo nisi enim autem mollitia, eaque pariatur tempora iste harum voluptate, facilis adipisci nostrum fuga! Vel quis et laboriosam magni praesentium culpa perferendis in id nisi, soluta dolorem non veritatis mollitia maxime. Officiis vitae quo temporibus maxime enim magnam, harum numquam suscipit impedit consequatur assumenda, nulla neque maiores! Qui rerum laudantium modi in dolores ut deserunt quo iure harum quibusdam optio, corporis quaerat. Consectetur cupiditate vitae nobis ullam minima illo distinctio voluptatem! Quas officia eligendi distinctio, libero odio tempore perspiciatis ea, neque voluptas similique sit, maxime autem magnam ad totam. Illum quibusdam dignissimos quos, harum eligendi quidem quo illo ullam facere dolor deserunt, libero sit placeat facilis, laborum eum beatae necessitatibus! Ipsam soluta quod reprehenderit, enim sapiente modi. Libero incidunt iste, dolorem blanditiis, natus optio totam et ipsum itaque cum ad inventore esse nemo facere non veniam perferendis placeat, alias autem possimus doloremque earum temporibus repellat? Beatae a laudantium ipsam aliquam doloremque recusandae numquam eos velit illo similique, vero earum minus fugit!</p>
+                <a href="#" class="leermas">Leer más</a>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <h2>Footer</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quasi architecto necessitatibus assumenda fugit cum totam, dolor placeat repudiandae soluta nihil maiores rem omnis perferendis officiis doloremque odit! Id dignissimos qui fugiat ipsum ullam voluptatibus perferendis pariatur nobis possimus esse molestias quasi dolorum, voluptas provident rem nisi nulla harum eaque debitis incidunt vel dolore impedit obcaecati? Vel vero animi pariatur error alias voluptatum, delectus qui, minus placeat debitis sunt, atque fuga? Dolore porro velit ab voluptatum alias, consectetur earum tempore illo, a unde sed, quas quia vel quaerat! Voluptates ducimus, numquam doloremque quibusdam dolorem quae consequuntur laboriosam, velit similique quia accusamus itaque omnis quis. Culpa labore voluptatem aspernatur laboriosam similique facere ducimus tempore. Iusto quidem fuga nam itaque, expedita sint nesciunt veritatis hic eaque cupiditate officiis nihil libero facilis suscipit eligendi saepe voluptas ducimus natus vel sit iure necessitatibus optio. Natus, porro minima velit minus animi facilis ipsam fuga id ex repudiandae officiis ducimus odit omnis veniam rem corporis quas quibusdam ipsum quis aspernatur magni! Consequuntur unde mollitia nemo distinctio vitae quas. A assumenda at, illo nulla quidem itaque animi dolores. Esse mollitia accusamus laborum ab, commodi aspernatur sequi eum culpa doloremque, ipsa autem similique veniam officiis maxime eius vitae perspiciatis pariatur ratione dolores nemo repudiandae facilis quisquam. Quibusdam eaque iusto veniam expedita id distinctio, rerum nihil magni debitis voluptatibus? Cumque delectus veniam repellat aliquid quae tempore ratione odit fuga sit nisi at recusandae, nesciunt modi dolores, voluptate velit odio repellendus animi aliquam ab pariatur itaque soluta. Veritatis, itaque ipsum.</p>
+    </footer>
+</body>
+</html>
