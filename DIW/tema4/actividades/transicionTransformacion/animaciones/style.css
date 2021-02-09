@@ -1,0 +1,120 @@
+.cir {
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    border: 5px groove gray;
+    border-radius: 100px;
+    font-size: x-large;
+    position: relative;
+}
+
+#c1 {
+    animation-name: ani1;
+    animation-duration: 2s;
+}
+
+@keyframes ani1 {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        left: 500px;
+        top: 0px;
+    }
+
+    50%{
+        left: 500px;
+        top: 500px;
+    }
+
+    75% {
+        left: 250px;
+        top: 750px;
+    }
+
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+#c2 {
+    animation-name: ani2;
+    animation-duration: 4s;
+}
+
+@keyframes ani2 {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+
+    20% {
+        left: 200px;
+        top: 200px;
+    }
+
+    40%{
+        left: 0px;
+        top: 400px;
+    }
+
+    60% {
+        left: 500px;
+        top: 750px;
+    }
+
+    80% {
+        left: 100px;
+        top: 200px;
+    }
+
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+#c3 {
+    animation-name: ani3;
+    animation-duration: 5s;
+}
+
+@keyframes ani3 {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+
+    20% {
+        background-color: black;
+        left: 600px;
+        top: 400px;
+    }
+
+    40%{
+        background-color: chocolate;
+        left: 300px;
+        top: 50px;
+    }
+
+    60% {
+        background-color: blueviolet;
+        left: 0px;
+        top: 0px;
+    }
+
+    80% {
+        background-color: darkslategrey;
+        left: 300px;
+        top: 200px;
+    }
+
+    100% {
+        background-color: brown;
+        left: 0px;
+        top: 0px;
+    }
+}
