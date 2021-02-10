@@ -37,6 +37,7 @@ window.addEventListener('load', () => {
         input1.type = 'number';
         input1.name = 'id';
         input1.id = 'id';
+        input1.checked = validarPrecio;
 
         //Creamos un salto
         var salto1 = document.createElement('br');
@@ -127,7 +128,7 @@ window.addEventListener('load', () => {
 
 
         // Capturamos el evento click sobre el boton Volver
-        botonVolver.addEventListener('click', () => {
+        botonBack.addEventListener('click', () => {
 
             // Limpiamos el contenedorDos
             contenedorDos.innerHTML = ' ';
@@ -136,6 +137,23 @@ window.addEventListener('load', () => {
             botonAdmin.disabled = false;
             botonEnter.disabled = false;
         });
+
+        function validarPrecio() {
+            var pricE = document.getElementById("precio");
+            var pric = pricE.value;
+            pricE.pattern = "^\\d{2}[.]\\d{2}$"
+            if (pric == "" || pric == null || pric.length == 0 ) {
+                alert("El precio no puede ser vacío");
+                return false;
+            }
+            if (!pricE.checkValidity()) {
+                if (pricE.validity.patternMismatch) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
     });
 
     botonEnter.addEventListener('click', () => {
@@ -145,10 +163,10 @@ window.addEventListener('load', () => {
         var tHead = document.createElement('thead');
         var tr = document.createElement('tr');
         var tBody = document.createElement('tbody');
-        var botonPrestamo = document.createElement('button');
-        botonPrestamo.type = 'submit';
-        botonPrestamo.innerHTML = 'Prestamo';
-        botonPrestamo.id = 'prestamo';
+        var botonAdd = document.createElement('button');
+        botonAdd.type = 'submit';
+        botonAdd.innerHTML = 'Añadir';
+        botonAdd.id = 'añadir';
         var botonBack = document.createElement('button');
         botonBack.id = 'volver';
         botonBack.innerHTML = 'Volver';
@@ -181,6 +199,7 @@ window.addEventListener('load', () => {
             check.type = 'checkbox';
             check.name = 'checkbox';
             check.classname = 'checkbox';
+            check.onclick = checkboxs;
 
             tBody.appendChild(tr);
             tr.appendChild(td1);
@@ -189,23 +208,28 @@ window.addEventListener('load', () => {
             tr.appendChild(check);
         }
 
-        contenedorDos.appendChild(botonPrestamo);
+        contenedorDos.appendChild(botonAdd);
         contenedorDos.appendChild(botonBack);
 
         botonAdmin.disabled = true;
         botonEnter.disabled = true;
-        botonPrestamo.disabled = true;
+        botonAdd.disabled = true;
 
         botonBack.addEventListener('click', () => {
 
             contenedorDos.innerHTML = ' ';
 
             botonAdmin.disabled = false;
-            botonEnter.disabled = true;
+            botonEnter.disabled = false;
         });
 
-        var checkboxs = document.querySelectorAll(".checkbox");
-
-        var contador = 0;
+        function checkboxs() {
+            var checkboxs = document.getElementsByClassName("checkbox");
+            if (checkboxs.checked == true) {
+                botonAdd.disabled = true;
+            } else {
+                botonAdd.disabled = false;
+            }
+        }
     })
 });
