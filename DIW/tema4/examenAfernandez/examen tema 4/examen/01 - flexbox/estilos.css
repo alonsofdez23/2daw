@@ -1,0 +1,15 @@
+section {
+    display: flex;
+    width: 98%;
+    height: 95vh;
+    padding: 10px;
+    background-color: blanchedalmond;
+  }
+   
+  div {
+    background-color: palevioletred;
+    font-size: 20px;
+    color: white;
+    margin: 10px;
+    flex-grow: 4;
+  }

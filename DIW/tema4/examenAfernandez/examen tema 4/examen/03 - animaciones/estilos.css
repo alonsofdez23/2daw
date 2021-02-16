@@ -1,0 +1,32 @@
+#atletico {
+    animation-name: atleti;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes atleti {
+    from {
+        transform: scale(1.2);
+    }
+
+    to {
+        transform: translateY(200px);
+    }
+}
+
+#sevilla {
+    animation-name: sevilla;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes sevilla {
+    from {
+        transform: scale(1.2);
+    }
+
+    to {
+        transform: translateY(-200px);
+    }
+}

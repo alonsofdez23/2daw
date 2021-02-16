@@ -1,0 +1,124 @@
+#cuerpo {
+    width: 95%;
+  }
+
+  .imagen{
+      width: 80%;
+  }
+
+  #cabecera{
+      width: 100%;
+  }
+
+  #menu1 {
+    background-color: cadetblue;
+  }
+
+  #menu2 {
+    background-color: cadetblue;
+  }
+
+  #menu3 {
+    background-color: cadetblue;
+  }
+
+  #menu4{
+      background-color: cadetblue;
+  }
+
+  #lateralizq1 {
+    background-color: gray;
+  }
+
+  #lateralizq2 {
+    background-color:chocolate;
+  }
+
+  #imagencentral {
+    background-color: cornflowerblue;
+  }
+
+  #textocentral {
+    background-color: darksalmon;
+  }
+
+  #lateralder1{
+      background-color: khaki;
+  }
+
+  #footer{
+      background-color: lavender;
+  }
+
+  @media screen and (min-width:800px){
+    #cuerpo {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 10px 10px;
+      grid-template-areas:
+        "menu1 menu2 menu3 menu4"
+        "lateralizq1 imagencentral imagencentral lateralder1"
+        "lateralizq2 textocentral textocentral lateralder1"
+        "footer footer footer footer";
+    }
+
+    #menu1 { grid-area: menu1; }
+    #menu2 { grid-area: menu2; }
+    #menu3 { grid-area: menu3; }
+    #menu4 { grid-area: menu4; }
+    #lateralizq1 { grid-area: lateralizq1; }
+    #lateralizq2 { grid-area: lateralizq2; }
+    #imagencentral { grid-area: imagencentral; }
+    #textocentral { grid-area: textocentral; align-self: end;}
+    #lateralder1 { grid-area: lateralder1; }
+    #footer { grid-area: footer; }
+
+    .imagen {
+      width: 80%;
+    }
+    
+
+}
+
+  @media screen and (max-width:800px){
+    #cuerpo {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px 10px;
+    }
+
+    #menu1 {
+      grid-row: 2;
+    }
+    #menu2 {
+      grid-row: 3;
+    }
+    #menu3 {
+      grid-row: 4;
+    }
+    #menu4 {
+      grid-row: 5;
+    }
+    #lateralizq1 {
+      grid-row: 6;
+    }
+    #lateralizq2 {
+      grid-row: 7;
+    }
+    #imagencentral {
+      grid-row: 8;
+    }
+    #textocentral {
+      grid-row: 9;
+    }
+    #lateralder1 {
+      display: none;
+    }
+    #footer {
+      grid-row: 10;
+    }
+     
+    .imagen {
+        width: 40%;
+    }
+  }
