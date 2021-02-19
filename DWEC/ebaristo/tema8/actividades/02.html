@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../../../ebaristo/actividades/jquery-3.5.1-descargado.js"></script>
+        <title>Actividad 1</title>
+        <script>
+            $(function(){
+
+                function gestionarPeticion() {
+                    let request = this;
+                    if (request.readyState == 4 && request.status == 201) {
+                        let div = $("<div>");
+                        div.text(request.status);
+                        
+                        let respuestEnTexto = request.responseText;
+                        let respuestaParseada = JSON.parse(respuestEnTexto);
+
+                        let id = respuestaParseada.id;
+                        let nombre = respuestaParseada.first_name;
+                        let apellido = respuestaParseada.last_name;
+
+                        $("body").append(
+                            div,
+                            $("<div>").text(id),
+                            $("<div>").text(nombre),
+                            $("<div>").text(apellido)
+                        );
+                    }
+                }
+
+                function obtenerDatos() {
+                    let nombre = $("#nombre").val();
+                    let apellido = $("#apellido").val();
+                    
+                    let objetoConDatos = {
+                        first_name: nombre,
+                        last_name: apellido
+                    }
+                }
+
+                function crearUsuario() {
+                    let datosEnviar = obtenerDatos();
+                    let textoNoSeEnQueFormato = JSON.stringify(datosEnviar)
+                    
+                    let request = new XMLHttpRequest();
+                    request.open("POST", "https://reqres.in/api/users");
+                    request.setRequestHeader("Content-Type", "application/json");
+                    request.onreadystatechange = gestionarPeticion;
+                    request.send(textoNoSeEnQueFormato);
+                }
+
+            });
+        </script>
+    </head>
+    <body>
+
+        <input id="nombre">
+        <input id="apellido">
+        <button id="botonCrear">Solicitar Información</button>
+    </body>
+</html>

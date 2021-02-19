@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../../../ebaristo/actividades/jquery-3.5.1-descargado.js"></script>
+        <title>Actividad 1</title>
+        <script>
+            $(function(){
+                function crearTd(contenido, contenedor) {
+
+                    return $("<td>").text(contenido)
+                    contenedor
+                }
+
+                function solicitarInformacion() {
+                    let request = new XMLHttpRequest();
+                    request.open("GET", "https://reqres.in/api/users");
+                    request.onreadystatechange = comprobarEstado;
+                    request.send();
+                }
+
+                function comprobarEstado() {
+                    let request = this;
+                    console.log("comprobando estado");
+                    if (request.readyState == 4 && request.status == 200) {
+                        let respuestaJson = JSON.parse(request.responseText);
+                        let paginaActual = respuestaJson.page;
+                        let totalPaginas = respuestaJson.total_pages;
+                        let usuarios = respuestaJson.data;
+
+                        let div = $("<div>");
+                        div.text(paginaActual);
+                        $("table").before(div);
+
+                        for (usuario of usuarios) {
+                            let id = this.id;
+                            let nombre = this.first_name;
+                            let apellido = this.last_name;
+                            let email = this.email;
+
+                            let fila = $("<tr>");
+
+                            crearTd(id, fila);
+                            crearTd(nombre, fila);
+                            crearTd(apellido, fila);
+                            crearTd(email, fila);
+
+                            tabla.append(fila)
+                        }
+
+                        $("body").append(div);
+                    }
+                }
+
+                $("table").hide();
+                $("#botonSolicitar").click(solicitarInformacion); 
+            });
+        </script>
+    </head>
+    <body>
+        <button type="submit" id="botonSolicitar">Solicitar Información</button>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+            </tr>
+        </table>
+    </body>
+</html>
