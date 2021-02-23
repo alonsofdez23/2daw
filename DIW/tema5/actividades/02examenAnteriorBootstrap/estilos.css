@@ -1,0 +1,69 @@
+#cuerpo {
+    width: 95%;
+  }
+
+  .imagen{
+      width: 80%;
+  }
+
+  #cabecera{
+      width: 100%;
+  }
+
+  #menu1 {
+    background-color: cadetblue;
+  }
+
+  #menu2 {
+    background-color: cadetblue;
+  }
+
+  #menu3 {
+    background-color: cadetblue;
+  }
+
+  #menu4{
+      background-color: cadetblue;
+  }
+
+  #lateralizq1 {
+    background-color: gray;
+  }
+
+  #lateralizq2 {
+    background-color:chocolate;
+  }
+
+  #imagencentral {
+    background-color: cornflowerblue;
+  }
+
+  #textocentral {
+    background-color: darksalmon;
+  }
+
+  #lateralder1{
+      background-color: khaki;
+  }
+
+  #footer{
+      background-color: lavender;
+  }
+
+  @media screen and (min-width:800px){
+    
+      .imagen{
+          width: 80%;
+      }
+    
+
+}
+
+  @media screen and (max-width:800px){
+     
+      .imagen{
+          width: 40%;
+      }
+
+
+  }
