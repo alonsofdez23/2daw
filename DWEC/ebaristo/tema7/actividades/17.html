@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Actividad 17</title>
+        <script src="jquery-3.5.1-descargado.js"></script>
+        <link rel="stylesheet" href="style17.css">
+        <script>
+            $(function(){
+                $("#hide").on("click", function() {
+                    $("#div1").fadeIn()
+                    $("#div2").fadeIn("slow");
+                    $("#div3").fadeIn(3000);
+                })
+            });
+        </script>
+    </head>
+
+    <body>
+        <button id="hide">Agregar opacidad</button>
+        <div id="div1">
+            <p>Elemento 1</p>
+        </div>
+        <div id="div2">
+            <p>Elemento 2</p>
+        </div>
+        <div id="div3">
+            <p>Elemento 3</p>
+        </div>
+    </body>
+</html>

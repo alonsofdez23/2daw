@@ -1,0 +1,25 @@
+#contenedorSuperior {
+    align-items: center;
+}
+
+#contenedorCirculos {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.circulo {
+    background-color: blue;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.hover {
+    background-color: gray;
+}
+
+.pulsado {
+    opacity: 0.4;
+}

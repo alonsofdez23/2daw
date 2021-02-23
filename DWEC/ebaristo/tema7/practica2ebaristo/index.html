@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <title>Ejercicio animaciones</title>
+        <script src="jquery-3.5.1-descargado.js"></script>
+        <link rel="stylesheet" href="practica2.css">
+        <script>
+
+            $(function(){
+
+                var numElementos = 0;
+
+                function borrarCirculo() {
+                    let circuloBorrar = $(".pulsado");
+                    circuloBorrar.remove();
+                }
+
+                function cambiarContenedorCirculos(padre, estoyAñadiendo) {
+                    if (estoyAñadiendo || numElementos != 1) {
+                        padre.slideUp("fast", function() {
+                            if (estoyAñadiendo) {
+                                crearCirculo(padre)
+                            } else {
+                                borrarCirculo()
+                            }
+
+                            estoyAñadiendo ? numElementos++ : numElementos--;
+                            let deboDesactivarBoton = numElementos == 5
+                            $("button").attr("disabled", deboDesactivarBoton);
+                            
+                            padre.slideDown("slow", function() {
+                                $("h1").text(numElementos)
+                            });
+                        })
+                    } else {
+                        alert("No puede borrar círculos si solo queda uno")
+                    }
+                }
+
+                function crearCirculo(padre) {
+                    let circulo = $("<div>").addClass("circulo");
+
+                    circulo.hover(
+                        function() {
+                            $(this).toggleClass("hover")
+                        },
+                        function() {
+                            $(this).toggleClass("hover")
+                        }
+                    )
+
+                    circulo.click(function() {
+                        let clase = $(this).attr("class");
+                        if (clase.includes("pulsado")) {
+                            cambiarContenedorCirculos(padre,  false)
+                        } else {
+                            $(".circulo").removeClass("pulsado")
+                            $(this).addClass("pulsado");
+                        }
+
+                    })
+
+                    padre.append(circulo);
+                }
+
+                function crearCirculos(idContenedor, numCirculos) {
+                    let divCirculos = $("<div>").attr("id", idContenedor);
+
+                    for (i = 0; i < numCirculos; i++) {
+                        crearCirculo(divCirculos);
+                    }
+
+                    return divCirculos
+                }
+
+                function crearPaginaPrincipal(body) {
+                    let contenedorCirculos = crearCirculos("contenedorCirculos", numElementos)
+                    body.append(contenedorCirculos)
+
+                    let contenedorSuperior = $("<div>").attr("id", "contenedorSuperior")
+
+                    let contador = $("<h1>");
+                    contador.text(numElementos);
+                    contenedorSuperior.append(contador)
+
+                    let botonAñadir = $("<button>").text("Añadir").attr("id", "botonAñadir");
+                    botonAñadir.click(function() {
+                        cambiarContenedorCirculos(contenedorCirculos, true)
+                    })
+                    contenedorSuperior.append(botonAñadir);
+
+                    body.prepend(contenedorSuperior)
+                }
+
+                $("#crear").on("click", function() {
+                    let divInicial = $("#inicial")
+                    divInicial.fadeOut("slow", function () { 
+                        numElementos = $("#fElementos").val()
+
+                        divInicial.remove();
+
+                        let body = $("body");
+                        body.hide();
+                        crearPaginaPrincipal(body);
+                        body.fadeIn("slow")
+                    })
+                })
+
+                $("#fElementos").blur(function() {
+                    let disabled = true;
+
+                    let valor = $(this).val();
+                    if (!isNaN(valor)) {
+                        let numero = parseInt(valor);
+                        //if (numero > 0 && numero <= 5) {
+                        if (/^[1-5]$/.test(valor)) {
+                            disabled = false;
+                        }
+                    }
+
+                    $("#crear").attr("disabled", disabled)
+                })
+                
+            });
+
+        </script>
+    </head>
+
+    <body>
+        <div id="inicial">
+            <label for="fElementos">Número de círculos:</label>
+            <input type="text" id="fElementos" name="fElementos">
+
+            <br><br>
+
+            <button id="crear" disabled=true>Crear</button>
+        </div>
+    </body>
+</html>
