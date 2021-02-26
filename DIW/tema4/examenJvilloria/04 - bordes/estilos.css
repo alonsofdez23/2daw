@@ -1,0 +1,4 @@
+h2 {
+  border: 30px solid transparent;
+  border-image: url(./BORDE.png) 50 70 repeat;
+}

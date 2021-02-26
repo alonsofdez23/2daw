@@ -1,0 +1,43 @@
+#atletico {
+  animation-name: atletico;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+#sevilla {
+  animation-name: sevilla;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes atletico {
+  25% {
+    transform: scale(1.2) translateY(200px) translateX(-50px);
+  }
+  50% {
+    transform: translateY(200px);
+  }
+  75% {
+    transform: translateY(200px);
+  }
+  100% {
+    transform: scale(1) translateY(200px);
+  }
+}
+
+@keyframes sevilla {
+  25% {
+    transform: scale(1.2) translateY(-200px) translateX(-50px);
+  }
+  50% {
+    transform: translateY(-200px);
+  }
+  75% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: scale(1) translateY(-200px);
+  }
+}

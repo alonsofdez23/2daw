@@ -1,0 +1,124 @@
+#cuerpo {
+  width: 95%;
+}
+
+.imagen {
+  width: 80%;
+}
+
+#cabecera {
+  width: 100%;
+}
+
+#menu1 {
+  background-color: cadetblue;
+}
+
+#menu2 {
+  background-color: cadetblue;
+}
+
+#menu3 {
+  background-color: cadetblue;
+}
+
+#menu4 {
+  background-color: cadetblue;
+}
+
+#lateralizq1 {
+  background-color: gray;
+}
+
+#lateralizq2 {
+  background-color: chocolate;
+}
+
+#imagencentral {
+  background-color: cornflowerblue;
+}
+
+#textocentral {
+  background-color: darksalmon;
+}
+
+#lateralder1 {
+  background-color: khaki;
+}
+
+#footer {
+  background-color: lavender;
+}
+
+@media screen and (min-width: 800px) {
+  #cuerpo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+  }
+
+  #lateralizq1 {
+    grid-column: 1;
+    grid-row: 2 / span 2;
+  }
+
+  #lateralizq2 {
+    grid-column: 1;
+    grid-row: 4 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #imagencentral {
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #textocentral {
+    grid-column: 2 / span 2;
+    grid-row: 5;
+  }
+
+  #lateralder1 {
+    grid-column: 4;
+    grid-row: 2 / span 4;
+    display: flex;
+    justify-content: center;
+  }
+
+  #footer {
+    grid-column: 1 / span 4;
+    grid-row: 6;
+  }
+
+  .imagen {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #lateralizq2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #imagencentral {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; /* LA TRAMPA */
+  }
+
+  #lateralder1 {
+    display: none;
+  }
+
+  .imagen {
+    width: 40%;
+  }
+}

@@ -1,0 +1,30 @@
+section {
+  display: flex;
+  height: 95vh;
+  width: 98%;
+  padding: 10px;
+  background-color: blanchedalmond;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+div {
+  background-color: palevioletred;
+  font-size: 20px;
+  color: white;
+  margin: 10px;
+  min-width: 30%;
+  min-height: 30%;
+  flex: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#derecha {
+  justify-content: flex-end;
+}
+
+#abajo {
+  align-items: flex-end;
+}
