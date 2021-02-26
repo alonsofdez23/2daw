@@ -1,0 +1,17 @@
+
+.borde{
+
+    border:dodgerblue 1px solid;
+}
+
+.contenedor {
+    display: flex;
+    flex-flow: row wrap;
+}
+div {
+    display: flex;
+    min-width: 40%;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+}

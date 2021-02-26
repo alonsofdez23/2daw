@@ -1,0 +1,197 @@
+#cuerpo {
+    width: 95%;
+  }
+
+  .imagen{
+      width: 80%;
+  }
+
+  #cabecera{
+      width: 100%;
+  }
+
+  #menu1 {
+
+    background-color: cadetblue;
+  }
+
+  #menu2 {
+
+    background-color: cadetblue;
+  }
+
+  #menu3 {
+
+    background-color: cadetblue;
+  }
+
+  #menu4{
+  
+      background-color: cadetblue;
+  }
+
+  #menu5{
+
+    background-color: cadetblue;
+}
+
+  #lateralizq1 {
+
+    background-color: gray;
+  }
+
+
+  #textocentral{
+
+
+    background-color: darksalmon;
+  }
+  
+  #textoderecho{
+ 
+
+    background-color: darksalmon;
+  }
+  
+  #textoizquierdo {
+
+    background-color: darksalmon;
+  }
+
+  #lateralder1{
+
+      background-color: khaki;
+  }
+
+  #footer{
+
+      background-color: lavender;
+  }
+  
+  #imagencentral{
+
+    background-color: dodgerblue;
+
+  }
+
+  @media screen and (min-width:800px){
+      #cuerpo {
+        width: 95%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 15px;
+      }
+      #menu1 {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      #menu2 {
+        grid-column: 2;
+        grid-row: 1;
+      }
+      #menu3 {
+        grid-column: 3;
+        grid-row: 1;
+      }
+      #menu4 {
+        grid-column: 4;
+        grid-row: 1;
+      }
+      #menu5 {
+        grid-column: 5;
+        grid-row: 1;
+      }
+      #lateralizq1 {
+        grid-column: 1;
+        grid-row: 2 / 6;
+      }
+      #imagencentral {
+        grid-column: 2 / 5;
+        grid-row: 2 / 3;
+      }
+      #lateralder1 {
+        grid-column: 5;
+        grid-row: 2 / 6;
+      }
+      #textoizquierdo {
+        grid-column: 2;
+        grid-row: 3;
+      }
+      #textocentral {
+        grid-column: 3;
+        grid-row: 4;
+      }
+      #textoderecho {
+        grid-column: 4;
+        grid-row: 5;
+      }
+      #footer {
+        grid-column: 1 / 6;
+        grid-row: 6;
+      }
+      .imagen{
+          width: 80%;
+      }
+}
+
+  @media screen and (max-width:800px){
+    #cuerpo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    #menu1 {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    #menu2 {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    #menu3 {
+      grid-column: 1;
+      grid-row: 2;
+    }
+    #menu4 {
+      grid-column: 2;
+      grid-row: 2;
+    }
+    #menu5 {
+      grid-column: 1 / 3;
+      grid-row: 3;
+    }
+    #lateralizq1 {
+      grid-column: 1;
+      grid-row: 5;
+    }
+    #imagencentral {
+      grid-column: 1 / 3;
+      grid-row: 4;
+    }
+    #lateralder1 {
+      display: none;
+    }
+    #textoizquierdo {
+      grid-column: 2;
+      grid-row: 5;
+    }
+    #textocentral {
+      grid-column: 1;
+      grid-row: 6;
+    }
+    #textoderecho {
+      grid-column: 2;
+      grid-row: 6;
+    }
+    #footer {
+      grid-column: 1 / 3;
+      grid-row: 7;
+      display: flex;
+      justify-content: right;
+    }
+
+    #textoizquierdo{
+      background-color: gray;
+    }
+
+  }
