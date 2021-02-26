@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>04 Ajax jQuery</title>
+        <script src="jquery-3.5.1-descargado.js"></script>
+        <script>
+            $(function () {
+                function crearTd(contenido, contenedor) {
+                    let td = $("<td>").text(contenido);
+                    contenedor.append(td);
+                }
+
+                $("#table").hide();
+
+                $("#get").click(() => {
+                    let idRecogido = $("#id").val();
+
+                    $.ajax({
+                        type: "GET",
+                        url: "https://reqres.in/api/users",
+                        dataType: "json",
+                        data: { 
+                            "id": idRecogido
+                        }
+                    })
+                    .done((datos) => {
+                        let user = datos.data;
+                        let div = $("#show");
+
+                        let tabla = $("#table");
+
+                        let id = user.id;
+                        let nombre = user.first_name;
+                        let apellido = user.last_name;
+                        let email = user.email;
+                        
+                        let fila = $("<tr>")
+
+                        crearTd(id, fila);
+                        crearTd(nombre, fila);
+                        crearTd(apellido, fila);
+                        crearTd(email, fila);
+                        
+                        tabla.append(fila)
+
+                        tabla.fadeIn("fast");
+                    })
+                    .fail((jq) => {
+                        if ( jq.status == 404) {
+                            let span = $("<span>").text("El usuario no existe.");
+                            let br = $("<br>");
+                            $("body").append(span);
+                            $("body").append(br);
+                        } else {
+                            let span = $("<span>").text("Ha habido un error.");
+                            let br = $("<br>");
+                            $("body").append(span);
+                            $("body").append(br);
+                        }
+                    })
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <input type="number" id="id">
+        <button id="get">Solicitar usuario</button>
+        <div id="show">
+            <table id="table">
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

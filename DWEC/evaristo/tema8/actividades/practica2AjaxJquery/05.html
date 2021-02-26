@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>05 Ajax jQuery</title>
+        <script src="jquery-3.5.1-descargado.js"></script>
+        <script>
+            $(function () {
+                function crearTd(contenido, contenedor) {
+                    let td = $("<td>").text(contenido);
+                    contenedor.append(td);
+                }
+
+                $("#table").hide();
+
+                $("#get").click(() => {
+                    let paginaRecogida = $("#page").val();
+                    let url = "https://reqres.in/api/users?page=" + paginaRecogida;
+
+                    $.ajax({
+                        type: "GET",
+                        url: url,
+                        dataType: "json"
+                    })
+                    .done((datos) => {
+                        let users = datos.data;
+                        let div = $("#show");
+
+                        let tabla = $("#table");
+
+                        for (user of users) {
+                            let id = user.id;
+                            let nombre = user.first_name;
+                            let apellido = user.last_name;
+                            let email = user.email;
+                            
+                            let fila = $("<tr>")
+
+                            crearTd(id, fila);
+                            crearTd(nombre, fila);
+                            crearTd(apellido, fila);
+                            crearTd(email, fila);
+                            
+                            tabla.append(fila)
+                        }
+
+                        tabla.fadeIn("fast");
+                    })
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <input type="number" id="page">
+        <button id="get">Solicitar usuarios</button>
+        <div id="show">
+            <table id="table">
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
