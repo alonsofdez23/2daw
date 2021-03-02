@@ -7,53 +7,9 @@
         <title>Examen Bloque 2 Modelo 2</title>
         <link rel="stylesheet" href="styles.css">
         <script src="./js/jquery-3.5.1-descargado.js"></script>
-        <script src="./js/aux.js" defer></script>
-        <script>
-            $(function(){
-                function crearTd(contenido, contenedor) {
-                    let td = $("<td>").text(contenido)
-                    contenedor.append(td)
-                }
-
-                function solicitarInformacion() {
-                    $.ajax({
-                        type: "GET",
-                        url: "https://jsonplaceholder.typicode.com/users",
-                        dataType: "json"
-                    })
-                        .done(mostrarInformacion)
-                }
-
-                function mostrarInformacion(respuestaJson) {
-                    let usuarios = respuestaJson.data;
-                    
-                    let tabla = $("table")
-
-                    for (usuario of usuarios) {
-
-                        let id = usuario.id;
-                        let email = usuario.email;
-                        let ciudad = usuario.address;
-                        
-                        let fila = $("<tr>")
-
-                        crearTd(id, fila);
-                        crearTd(email, fila);
-                        crearTd(ciudad, fila);
-                        
-                        tabla.append(fila)
-                    }
-
-                    tabla.toggle();                        
-                }
-
-                $("table").hide()
-                $("#botonSolicitar").click(solicitarInformacion);
-            })
-        </script>
+        <script src="./js/aux.js"></script>
     </head>
     <body>
-        <button id="botonSolicitar">Solicitar usuarios</button>
         <table>
             <tr>
                 <th>ID</th>
