@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Ejercicio comunicacion asincrona 2</title>
+        <script src="jquery-3.5.1-descargado.js"></script>
+        <link rel="stylesheet" href="config.css">
+        <script>
+
+            $(function(){
+
+                function mostrarInformacion(respuestaParseada, textoDeExito, jqxhr) {
+                    let div = $("<div>")
+                    div.text(jqxhr.status)
+                    
+                    let id = respuestaParseada.id;
+                    let nombre = respuestaParseada.first_name;
+                    let apellido = respuestaParseada.last_name;
+
+                    $("body").append(
+                        div,
+                        $("<div>").text(id),
+                        $("<div>").text(nombre),
+                        $("<div>").text(apellido)
+                    )
+                }
+
+                function obtenerDatos() {
+                    let nombre = $("#nombre").val()
+                    let apellido = $("#apellido").val()
+
+                    let objetoConDatos = {
+                        first_name: nombre,
+                        last_name: apellido
+                    }
+
+                    return objetoConDatos;
+                }
+
+                function crearUsuario() {
+                    let datosEnviar = obtenerDatos();
+
+                    $.ajax({
+                        type: "POST",
+                        url: "https://reqres.in/api/users",
+                        dataType: "json",
+                        data: JSON.stringify(datosEnviar),
+                        contentType: "application/json"
+                    })
+                        .done(mostrarInformacion)
+                }
+                
+                $("#botonCrear").click(crearUsuario);
+
+            });
+
+        </script>
+    </head>
+
+    <body>
+        
+        <input id="nombre">
+        <input id="apellido">
+        <button id="botonCrear">Añadir usuario</button>
+        
+    </body>
+</html>

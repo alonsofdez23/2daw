@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>Ejercicio comunicacion asincrona 6</title>
+        <script src="jquery-3.5.1-descargado.js"></script>
+        <link rel="stylesheet" href="config.css">
+        <script>
+
+            $(function(){
+
+                function crearTd(contenido, contenedor) {
+                    let td = $("<td>").text(contenido)
+                    contenedor.append(td)
+                }
+
+                function obtenerDato() {
+                    return $("#inputNumero").val()
+                }
+
+                function solicitarInformacion() {
+                    let datoEnviar = obtenerDato()
+                    let url = "https://reqres.in/api/users"
+                    let parameters = {
+                        page: datoEnviar
+                    }
+
+                    $.getJSON(url, parameters)
+                        .done(mostrarInformacion)
+                }
+
+                function mostrarInformacion(respuestaJson) {
+                    let paginaActual = respuestaJson.page;
+                    let totalPaginas = respuestaJson.total_pages;
+                    let usuarios = respuestaJson.data;
+
+                    if (usuarios.length == 0) {
+                        alert("La página solicitada no existe")
+                    } else {
+                        let tabla = $("table")
+
+                        let div = $("<div>")
+                        div.text("Página actual: " + paginaActual + " de " + totalPaginas)
+                        tabla.before(div);
+
+                        for (usuario of usuarios) {
+                        //$.each(usuarios, function() {
+
+                            let id = usuario.id;
+                            let nombre = usuario.first_name;
+                            let apellido = usuario.last_name;
+                            let email = usuario.email;
+                            
+                            let fila = $("<tr>")
+
+                            crearTd(id, fila);
+                            crearTd(nombre, fila);
+                            crearTd(apellido, fila);
+                            crearTd(email, fila);
+                            
+                            tabla.append(fila)
+                        }
+                        //})
+
+                        tabla.toggle(); 
+                    }   
+                }
+
+                $("table").hide()
+                $("#botonSolicitar").click(solicitarInformacion);
+
+            });
+
+        </script>
+    </head>
+
+    <body>
+        
+        <input type="number" id="inputNumero">
+        <button id="botonSolicitar">Solicitar página</button>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>nombre</th>
+                <th>apellido</th>
+                <th>email</th>
+            </tr>
+        </table>
+        
+    </body>
+</html>

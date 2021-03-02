@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Ejercicio comunicacion asincrona 1</title>
+        <script src="jquery-3.5.1-descargado.js"></script>
+        <link rel="stylesheet" href="config.css">
+        <script>
+
+            $(function(){
+
+                function crearTd(contenido, contenedor) {
+                    let td = $("<td>").text(contenido)
+                    contenedor.append(td)
+                }
+
+                function solicitarInformacion() {
+                    $.ajax({
+                        type: "GET",
+                        url: "https://reqres.in/api/users",
+                        dataType: "json"
+                    })
+                        .done(mostrarInformacion)
+                }
+
+                function mostrarInformacion(respuestaJson) {
+                    let paginaActual = respuestaJson.page;
+                    let totalPaginas = respuestaJson.total_pages;
+                    let usuarios = respuestaJson.data;
+                    
+                    let tabla = $("table")
+
+                    let div = $("<div>")
+                    div.text("Página actual: " + paginaActual + " de " + totalPaginas)
+                    tabla.before(div);
+
+                    for (usuario of usuarios) {
+                    //$.each(usuarios, function() {
+
+                        let id = usuario.id;
+                        let nombre = usuario.first_name;
+                        let apellido = usuario.last_name;
+                        let email = usuario.email;
+                        
+                        let fila = $("<tr>")
+
+                        crearTd(id, fila);
+                        crearTd(nombre, fila);
+                        crearTd(apellido, fila);
+                        crearTd(email, fila);
+                        
+                        tabla.append(fila)
+                    }
+                    //})
+
+                    tabla.toggle();                        
+                }
+
+                $("table").hide()
+                $("#botonSolicitar").click(solicitarInformacion);
+
+            });
+
+        </script>
+    </head>
+
+    <body>
+        
+        <button id="botonSolicitar">Solicitar usuarios</button>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>nombre</th>
+                <th>apellido</th>
+                <th>email</th>
+            </tr>
+        </table>
+        
+    </body>
+</html>

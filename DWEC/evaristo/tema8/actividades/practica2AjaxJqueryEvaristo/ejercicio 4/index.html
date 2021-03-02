@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>Ejercicio comunicacion asincrona 4</title>
+        <script src="jquery-3.5.1-descargado.js"></script>
+        <link rel="stylesheet" href="config.css">
+        <script>
+
+            $(function(){
+
+                function crearTd(contenido, contenedor) {
+                    let td = $("<td>").text(contenido)
+                    contenedor.append(td)
+                }
+
+                function obtenerDato() {
+                    return $("#inputNumero").val()
+                }
+
+                function solicitarInformacion() {
+                    let datoEnviar = obtenerDato()
+                    let url = "https://reqres.in/api/users/" + datoEnviar
+
+                    $.ajax({
+                        type: "GET",
+                        url: url,
+                        dataType: "json"
+                    })
+                        .done(mostrarInformacion)
+                        .fail(mostrarError)
+                        .always(mostrarTabla)
+                }
+
+                function mostrarInformacion(respuestaJson) {
+                    console.log("done")
+                    let usuario = respuestaJson.data;
+
+                    let id = usuario.id;
+                    let nombre = usuario.first_name;
+                    let apellido = usuario.last_name;
+                    let email = usuario.email;
+                    
+                    let fila = $("<tr>")
+                    crearTd(id, fila);
+                    crearTd(nombre, fila);
+                    crearTd(apellido, fila);
+                    crearTd(email, fila);
+                    
+                    let tabla = $("table")
+                    tabla.append(fila)
+                }
+
+                function mostrarError(jqxhr)  {    
+                    console.log("error")
+                    
+                    if ( jqxhr.status == 404) {
+                        let miSpan = $("<span>").text("El usuario no existe");
+                        $("body").append(miSpan)
+                    } else {
+                        let miSpan = $("<span>").text("Ha habido un error");
+                        $("body").append(miSpan)
+                    }
+                }
+
+                function mostrarTabla() {
+                    console.log("always")
+                    $("table").toggle()
+                }
+
+                $("table").hide()
+                $("#botonSolicitar").click(solicitarInformacion);
+
+            });
+
+        </script>
+    </head>
+
+    <body>
+        
+        <input type="number" id="inputNumero">
+        <button id="botonSolicitar">Solicitar usuario</button>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>nombre</th>
+                <th>apellido</th>
+                <th>email</th>
+            </tr>
+        </table>
+        
+    </body>
+</html>
