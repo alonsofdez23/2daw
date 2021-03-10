@@ -1,0 +1,91 @@
+@media screen and (max-width: 575px) {
+    #head {
+        background-color: #f7d373;
+        display: flex;
+        justify-content: center;
+    }
+
+    #dos {
+        background-color: aqua;
+        display: flex;
+        justify-content: center;
+    }
+
+    #tres {
+        background-color: #dc3545;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #foouno {
+        background-color: #ffc107;
+        display: flex;
+        justify-content: center;
+    }
+
+    #foodos {
+        background-color: #ffc107;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    #head {
+        background-color: aqua;
+    }
+
+    #dos {
+        background-color: #dc3545;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #tres {
+        background-color: #28a745;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    #foouno {
+        background-color: #ffc107;
+        display: flex;
+        justify-content: center;
+    }
+
+    #foodos {
+        background-color: #ffc107;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #head {
+        background-color: #28a745;
+    }
+
+    #uno {
+        display: flex;
+        justify-content: center;
+    }
+
+    #dos {
+        background-color: #dc3545;
+        display: flex;
+        justify-content: center;
+    }
+
+    #tres {
+        background-color: #dc3545;
+        display: flex;
+        justify-content: center;
+    }
+
+    #foouno {
+        background-color: #ffc107;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
